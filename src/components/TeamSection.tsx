@@ -13,7 +13,7 @@ const TeamSection = () => {
       id: 2,
       name: "Sarah Chen",
       designation: "Frontend Developer",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&h=400&q=80",
+      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=400&h=400&q=80",
     },
     {
       id: 3,

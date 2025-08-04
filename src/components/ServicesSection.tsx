@@ -10,7 +10,6 @@ const ServicesSection = () => {
     {
       category: "Web Design",
       icon: Monitor,
-      description: "Creating user-centered designs that drive engagement and conversion.",
       features: [
         "Hand Drawn Wireframes",
         "HiFi Designs", 
@@ -18,12 +17,11 @@ const ServicesSection = () => {
         "WordPress Sites",
         "UI/UX Designs"
       ],
-      showcaseImage: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=500&h=500&q=80"
+      showcaseImage: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&h=600&q=80"
     },
     {
       category: "Graphic Design", 
       icon: Palette,
-      description: "Building strong brand identities through creative visual solutions.",
       features: [
         "Logo Design",
         "Social Media Banners",
@@ -32,7 +30,7 @@ const ServicesSection = () => {
         "Photo Editing",
         "Brand & Visual Design"
       ],
-      showcaseImage: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&w=500&h=500&q=80"
+      showcaseImage: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&w=600&h=600&q=80"
     }
   ];
 
@@ -49,15 +47,13 @@ const ServicesSection = () => {
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Our Services
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive design and development solutions tailored to your business needs
-          </p>
         </motion.div>
         
         {/* Services Grid - Only 2 Services */}
         <div className="space-y-20 mb-16">
           {services.map((service, index) => {
             const IconComponent = service.icon;
+            const isGraphicDesign = service.category === "Graphic Design";
             
             return (
               <motion.div 
@@ -66,11 +62,11 @@ const ServicesSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="grid md:grid-cols-2 gap-12 items-center"
+                className={`grid md:grid-cols-2 items-center ${isGraphicDesign ? 'gap-2' : 'gap-4'}`}
               >
-                {/* Left: Service Showcase */}
-                <div className="order-2 md:order-1">
-                  <div className="bg-gray-100 rounded-2xl w-80 h-80 overflow-hidden shadow-soft">
+                {/* Service Showcase - Left for Web Design, Right for Graphic Design */}
+                <div className={`${isGraphicDesign ? 'order-2' : 'order-2 md:order-1'}`}>
+                  <div className="bg-gray-100 rounded-2xl w-full max-w-lg h-96 overflow-hidden shadow-soft mx-auto">
                     <img 
                       src={service.showcaseImage}
                       alt={`${service.category} showcase`}
@@ -79,8 +75,8 @@ const ServicesSection = () => {
                   </div>
                 </div>
 
-                {/* Right: Service Content */}
-                <div className="order-1 md:order-2 space-y-6">
+                {/* Service Content - Right for Web Design, Left for Graphic Design */}
+                <div className={`${isGraphicDesign ? 'order-1 md:pl-8' : 'order-1 md:order-2'} space-y-6`}>
                   {/* Title */}
                   <h3 className="text-3xl font-bold text-foreground">{service.category}</h3>
                   
@@ -96,16 +92,14 @@ const ServicesSection = () => {
                     ))}
                   </div>
                   
-                  {/* Description */}
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  {/* Learn More Link */}
-                  <div className="flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all cursor-pointer group">
-                    <span className="text-lg">Learn More</span>
+                  {/* Learn More Button */}
+                  <Button 
+                    variant="outline" 
+                    className="flex items-center gap-2 text-primary border-primary hover:bg-primary hover:text-white transition-all duration-300 px-6 py-3 text-lg"
+                  >
+                    Learn More
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                  </Button>
                 </div>
               </motion.div>
             );
@@ -122,7 +116,7 @@ const ServicesSection = () => {
         >
           <Button 
             size="lg" 
-            className="bg-black text-white hover:bg-gray-800 transition-colors text-lg px-8 py-4 rounded-lg"
+            className="bg-primary text-white hover:bg-primary/90 transition-colors text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl"
             onClick={() => navigate('/services')}
           >
             View All Services

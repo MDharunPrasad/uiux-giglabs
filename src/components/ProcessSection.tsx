@@ -1,4 +1,4 @@
-import { FileText, Layout, Palette, Code, TestTube, Truck, ArrowRight } from "lucide-react";
+import { FileText, Layout, Palette, Code, TestTube, Truck } from "lucide-react";
 import { motion } from "framer-motion";
 import { GradientHeading } from "@/components/ui/gradient-heading";
 
@@ -88,11 +88,6 @@ const ProcessSection = () => {
                   <p className="text-white/80 text-sm mb-4 font-medium">{step.description}</p>
                   <p className="text-white/70 text-sm leading-relaxed">{step.details}</p>
                 </div>
-                
-                {/* Arrow for desktop */}
-                {index < processSteps.length - 1 && (index + 1) % 3 !== 0 && (
-                  <ArrowRight className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 h-6 w-6 text-white/40" />
-                )}
               </motion.div>
             );
           })}
