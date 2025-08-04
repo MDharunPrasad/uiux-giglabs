@@ -51,8 +51,7 @@ const Navigation = () => {
           {/* WhatsApp Contact */}
           <div className="flex items-center gap-3">
             <div className="hidden md:flex flex-col items-end text-sm">
-              <span className="text-foreground font-medium">Good on WhatsApp</span>
-              <span className="text-muted-foreground">+1 234 567 890</span>
+              <span className="text-foreground font-medium">Connect through WhatsApp</span>
             </div>
             <Button 
               variant="outline" 

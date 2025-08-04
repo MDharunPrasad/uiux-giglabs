@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, ArrowRight, Monitor, Palette, Smartphone, Code, Camera, PenTool } from "lucide-react";
+import { ArrowRight, Monitor, Palette } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -11,7 +11,6 @@ const ServicesSection = () => {
       category: "Web Design",
       icon: Monitor,
       description: "Creating user-centered designs that drive engagement and conversion.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=500&q=80",
       features: [
         "Hand Drawn Wireframes",
         "HiFi Designs", 
@@ -19,13 +18,12 @@ const ServicesSection = () => {
         "WordPress Sites",
         "UI/UX Designs"
       ],
-      gradient: "from-blue-500 to-purple-600"
+      showcaseImage: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=500&h=500&q=80"
     },
     {
-      category: "Graphic Design",
+      category: "Graphic Design", 
       icon: Palette,
       description: "Building strong brand identities through creative visual solutions.",
-      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1e8b?auto=format&fit=crop&w=500&q=80",
       features: [
         "Logo Design",
         "Social Media Banners",
@@ -34,35 +32,7 @@ const ServicesSection = () => {
         "Photo Editing",
         "Brand & Visual Design"
       ],
-      gradient: "from-pink-500 to-orange-500"
-    },
-    {
-      category: "Mobile Design",
-      icon: Smartphone,
-      description: "Responsive and intuitive mobile experiences for all devices.",
-      image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=500&q=80",
-      features: [
-        "Mobile App UI",
-        "Responsive Design",
-        "Touch Interactions",
-        "Cross-Platform",
-        "User Testing"
-      ],
-      gradient: "from-green-500 to-teal-500"
-    },
-    {
-      category: "Web Development",
-      icon: Code,
-      description: "Robust and scalable web solutions using modern technologies.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=500&q=80",
-      features: [
-        "Frontend Development",
-        "Backend Solutions",
-        "API Integration",
-        "Database Design",
-        "Performance Optimization"
-      ],
-      gradient: "from-indigo-500 to-blue-600"
+      showcaseImage: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&w=500&h=500&q=80"
     }
   ];
 
@@ -84,10 +54,11 @@ const ServicesSection = () => {
           </p>
         </motion.div>
         
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        {/* Services Grid - Only 2 Services */}
+        <div className="space-y-20 mb-16">
           {services.map((service, index) => {
             const IconComponent = service.icon;
+            
             return (
               <motion.div 
                 key={index}
@@ -95,41 +66,46 @@ const ServicesSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group bg-white rounded-3xl p-8 shadow-soft hover:shadow-glow transition-all duration-500 hover:-translate-y-2"
+                className="grid md:grid-cols-2 gap-12 items-center"
               >
-                {/* Service Header */}
-                <div className="flex items-center gap-6 mb-6">
-                  <div className="relative">
+                {/* Left: Service Showcase */}
+                <div className="order-2 md:order-1">
+                  <div className="bg-gray-100 rounded-2xl w-80 h-80 overflow-hidden shadow-soft">
                     <img 
-                      src={service.image}
-                      alt={service.category}
-                      className="w-24 h-24 object-cover rounded-2xl shadow-medium"
+                      src={service.showcaseImage}
+                      alt={`${service.category} showcase`}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     />
-                    <div className={`absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center shadow-lg`}>
-                      <IconComponent className="w-5 h-5 text-white" />
-                    </div>
+                  </div>
+                </div>
+
+                {/* Right: Service Content */}
+                <div className="order-1 md:order-2 space-y-6">
+                  {/* Title */}
+                  <h3 className="text-3xl font-bold text-foreground">{service.category}</h3>
+                  
+                  {/* Features List */}
+                  <div className="space-y-4">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center gap-3">
+                        <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-foreground text-lg">{feature}</span>
+                      </div>
+                    ))}
                   </div>
                   
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">{service.category}</h3>
-                    <p className="text-muted-foreground">{service.description}</p>
+                  {/* Description */}
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  {/* Learn More Link */}
+                  <div className="flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all cursor-pointer group">
+                    <span className="text-lg">Learn More</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </div>
-                </div>
-                
-                {/* Features List */}
-                <div className="space-y-3 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center gap-3">
-                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.gradient}`} />
-                      <span className="text-foreground font-medium">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                {/* Learn More Link */}
-                <div className="flex items-center gap-2 text-primary font-semibold group-hover:gap-4 transition-all cursor-pointer">
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4" />
                 </div>
               </motion.div>
             );
@@ -146,11 +122,10 @@ const ServicesSection = () => {
         >
           <Button 
             size="lg" 
-            className="gradient-primary text-white shadow-button hover:shadow-glow transition-spring group text-lg px-8 py-4"
+            className="bg-black text-white hover:bg-gray-800 transition-colors text-lg px-8 py-4 rounded-lg"
             onClick={() => navigate('/services')}
           >
             View All Services
-            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
         </motion.div>
       </div>
