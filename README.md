@@ -1,22 +1,16 @@
-# Welcome to your Lovable project
+# GIGLABS - Creative Design Services
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/b733b8cb-4250-4fcd-96eb-b9b4819d2c20
+GIGLABS is a modern web application showcasing creative design services including web design, graphic design, and development solutions.
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/b733b8cb-4250-4fcd-96eb-b9b4819d2c20) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +56,11 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/b733b8cb-4250-4fcd-96eb-b9b4819d2c20) and click on Share -> Publish.
+You can deploy this project to any static hosting service like:
 
-## Can I connect a custom domain to my Lovable project?
+- Vercel
+- Netlify
+- GitHub Pages
+- Firebase Hosting
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Simply build the project with `npm run build` and deploy the generated `dist` folder.
