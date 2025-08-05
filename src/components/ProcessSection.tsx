@@ -73,7 +73,7 @@ const ProcessSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative"
+                className="relative"
               >
                 {/* Step Number */}
                 <div className="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-br from-white via-orange-50 to-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold text-lg z-10 shadow-lg border-2 border-white">
@@ -81,12 +81,12 @@ const ProcessSection = () => {
                 </div>
                 
                 {/* Card */}
-                <div className="bg-gradient-to-br from-white/95 via-white/90 to-white/85 backdrop-blur-md rounded-3xl p-8 h-full border-2 border-white/40 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105 group-hover:from-white group-hover:via-white/95 group-hover:to-white/90">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:from-orange-400 group-hover:to-orange-500 shadow-lg">
+                <div className="bg-gradient-to-br from-white/95 via-white/90 to-white/85 backdrop-blur-md rounded-3xl p-8 h-full border-2 border-white/40 shadow-xl">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                     <IconComponent className="h-8 w-8 text-white" />
                   </div>
                   
-                  <h3 className="font-bold text-xl text-gray-800 mb-3 group-hover:text-orange-600 transition-colors duration-300">{step.title}</h3>
+                  <h3 className="font-bold text-xl text-gray-800 mb-3">{step.title}</h3>
                   <p className="text-orange-600 text-sm mb-4 font-semibold">{step.description}</p>
                   <p className="text-gray-700 text-sm leading-relaxed">{step.details}</p>
                 </div>
