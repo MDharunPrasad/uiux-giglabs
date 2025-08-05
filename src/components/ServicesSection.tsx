@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Monitor, Palette } from "lucide-react";
+import { ArrowRight, Monitor, Palette, Figma, Code, Smartphone, Globe, Brush, Layout, Zap, Layers, TabletSmartphone, Eye, Rocket, Camera, Target } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const ServicesSection = () => {
@@ -9,6 +9,7 @@ const ServicesSection = () => {
     {
       category: "Web Design",
       icon: Monitor,
+      definition: "Crafting digital experiences that engage and convert users through intuitive design and seamless user interface development.",
       features: [
         "Hand Drawn Wireframes",
         "HiFi Designs", 
@@ -16,11 +17,20 @@ const ServicesSection = () => {
         "WordPress Sites",
         "UI/UX Designs"
       ],
+      relatedIcons: [
+        { icon: Figma, label: "Design Tools" },
+        { icon: Code, label: "Development" },
+        { icon: Smartphone, label: "Mobile First" },
+        { icon: Globe, label: "Web Standards" },
+        { icon: Layers, label: "UI Components" },
+        { icon: TabletSmartphone, label: "Responsive Design" }
+      ],
       showcaseImage: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&h=600&q=80"
     },
     {
       category: "Graphic Design", 
       icon: Palette,
+      definition: "Building powerful brand identities through visual storytelling and creative design solutions that make your business memorable.",
       features: [
         "Logo Design",
         "Social Media Banners",
@@ -28,6 +38,14 @@ const ServicesSection = () => {
         "Advertisement Mockups",
         "Photo Editing",
         "Brand & Visual Design"
+      ],
+      relatedIcons: [
+        { icon: Brush, label: "Creative Design" },
+        { icon: Camera, label: "Photography" },
+        { icon: Layout, label: "Brand Layout" },
+        { icon: Eye, label: "Visual Identity" },
+        { icon: Rocket, label: "Brand Launch" },
+        { icon: Target, label: "Marketing Focus" }
       ],
       showcaseImage: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&h=600&q=80"
     }
@@ -69,6 +87,13 @@ const ServicesSection = () => {
                   {/* Title */}
                   <h3 className="text-3xl font-bold text-foreground">{service.category}</h3>
                   
+                  {/* Definition */}
+                  <div className="space-y-2">
+                    <p className="text-muted-foreground text-lg leading-relaxed">
+                      {service.definition}
+                    </p>
+                  </div>
+                  
                   {/* Features List */}
                   <div className="space-y-4">
                     {service.features.map((feature, featureIndex) => (
@@ -81,10 +106,28 @@ const ServicesSection = () => {
                     ))}
                   </div>
                   
+                  {/* Related Icons */}
+                  <div className="flex flex-wrap gap-4 py-4">
+                    {service.relatedIcons.map((iconItem, iconIndex) => {
+                      const IconComponent = iconItem.icon;
+                      return (
+                        <div key={iconIndex} className="relative group">
+                          <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300 cursor-pointer">
+                            <IconComponent className="w-6 h-6 text-primary" />
+                          </div>
+                          {/* Tooltip on hover */}
+                          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10">
+                            {iconItem.label}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  
                   {/* Learn More Button */}
                   <Button 
                     variant="outline" 
-                    className="flex items-center gap-2 text-primary border-primary hover:bg-primary hover:text-white transition-all duration-300 px-6 py-3 text-lg"
+                    className="flex items-center gap-2 text-primary border-primary hover:bg-primary hover:text-white transition-all duration-300 px-6 py-3 text-lg group"
                   >
                     Learn More
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
