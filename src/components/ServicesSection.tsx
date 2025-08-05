@@ -2,9 +2,47 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Monitor, Palette } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "@/components/ui/carousel";
+import React, { useRef, useEffect, useCallback } from "react";
 
 const ServicesSection = () => {
   const navigate = useNavigate();
+  const [webDesignApi, setWebDesignApi] = React.useState<CarouselApi>();
+  const [graphicDesignApi, setGraphicDesignApi] = React.useState<CarouselApi>();
+  const webDesignIntervalRef = useRef<NodeJS.Timeout>();
+  const graphicDesignIntervalRef = useRef<NodeJS.Timeout>();
+
+  const startAutoplay = useCallback((api: CarouselApi, intervalRef: React.MutableRefObject<NodeJS.Timeout | undefined>) => {
+    if (!api) return;
+    
+    intervalRef.current = setInterval(() => {
+      if (api.canScrollNext()) {
+        api.scrollNext();
+      } else {
+        api.scrollTo(0);
+      }
+    }, 2000);
+  }, []);
+
+  const stopAutoplay = useCallback((intervalRef: React.MutableRefObject<NodeJS.Timeout | undefined>) => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (webDesignApi) {
+      startAutoplay(webDesignApi, webDesignIntervalRef);
+    }
+    return () => stopAutoplay(webDesignIntervalRef);
+  }, [webDesignApi, startAutoplay, stopAutoplay]);
+
+  useEffect(() => {
+    if (graphicDesignApi) {
+      startAutoplay(graphicDesignApi, graphicDesignIntervalRef);
+    }
+    return () => stopAutoplay(graphicDesignIntervalRef);
+  }, [graphicDesignApi, startAutoplay, stopAutoplay]);
   
   const services = [
     {
@@ -17,7 +55,12 @@ const ServicesSection = () => {
         "WordPress Sites",
         "UI/UX Designs"
       ],
-      showcaseImage: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&h=600&q=80"
+      showcaseImages: [
+        "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&h=600&q=80",
+        "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=600&h=600&q=80",
+        "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&h=600&q=80",
+        "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&w=600&h=600&q=80"
+      ]
     },
     {
       category: "Graphic Design", 
@@ -30,7 +73,12 @@ const ServicesSection = () => {
         "Photo Editing",
         "Brand & Visual Design"
       ],
-      showcaseImage: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&w=600&h=600&q=80"
+      showcaseImages: [
+        "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&w=600&h=600&q=80",
+        "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&h=600&q=80",
+        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=600&h=600&q=80",
+        "https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=600&h=600&q=80"
+      ]
     }
   ];
 
@@ -67,11 +115,31 @@ const ServicesSection = () => {
                 {/* Service Showcase - Left for Web Design, Right for Graphic Design */}
                 <div className={`${isGraphicDesign ? 'order-2' : 'order-2 md:order-1'}`}>
                   <div className="bg-gray-100 rounded-2xl w-full max-w-lg h-96 overflow-hidden shadow-soft mx-auto">
-                    <img 
-                      src={service.showcaseImage}
-                      alt={`${service.category} showcase`}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    />
+                    <Carousel
+                      setApi={isGraphicDesign ? setGraphicDesignApi : setWebDesignApi}
+                      className="w-full h-full"
+                      opts={{
+                        align: "start",
+                        loop: true,
+                      }}
+                      onMouseEnter={() => stopAutoplay(isGraphicDesign ? graphicDesignIntervalRef : webDesignIntervalRef)}
+                      onMouseLeave={() => startAutoplay(
+                        isGraphicDesign ? graphicDesignApi : webDesignApi, 
+                        isGraphicDesign ? graphicDesignIntervalRef : webDesignIntervalRef
+                      )}
+                    >
+                      <CarouselContent className="h-full">
+                        {service.showcaseImages.map((image, imageIndex) => (
+                          <CarouselItem key={imageIndex} className="h-full">
+                            <img 
+                              src={image}
+                              alt={`${service.category} showcase ${imageIndex + 1}`}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                            />
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                    </Carousel>
                   </div>
                 </div>
 

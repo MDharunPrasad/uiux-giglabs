@@ -29,16 +29,16 @@ const Navigation = () => {
               Home
             </Link>
             <Link 
-              to="/services" 
-              className={`transition-smooth ${isActive('/services') ? 'text-primary font-semibold' : 'text-foreground hover:text-primary'}`}
-            >
-              Services
-            </Link>
-            <Link 
               to="/about" 
               className={`transition-smooth ${isActive('/about') ? 'text-primary font-semibold' : 'text-foreground hover:text-primary'}`}
             >
               About
+            </Link>
+            <Link 
+              to="/services" 
+              className={`transition-smooth ${isActive('/services') ? 'text-primary font-semibold' : 'text-foreground hover:text-primary'}`}
+            >
+              Services
             </Link>
             <Link 
               to="/contact" 

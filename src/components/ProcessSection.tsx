@@ -52,10 +52,12 @@ const ProcessSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <GradientHeading variant="light" size="sm" className="mb-4">
-            HOW WE WORK
-          </GradientHeading>
-          <GradientHeading variant="light" size="xl">
+          <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+            <GradientHeading variant="light" size="sm" className="mb-0 text-white font-semibold tracking-wider">
+              HOW WE WORK
+            </GradientHeading>
+          </div>
+          <GradientHeading variant="light" size="xl" className="text-white drop-shadow-lg">
             Our Process
           </GradientHeading>
         </motion.div>
@@ -74,19 +76,19 @@ const ProcessSection = () => {
                 className="group relative"
               >
                 {/* Step Number */}
-                <div className="absolute -top-4 -left-4 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white font-bold text-sm z-10">
+                <div className="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-br from-white via-orange-50 to-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold text-lg z-10 shadow-lg border-2 border-white">
                   {index + 1}
                 </div>
                 
                 {/* Card */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 h-full border border-white/20 transition-all duration-300 group-hover:bg-white/20 group-hover:scale-105">
-                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-white/30">
+                <div className="bg-gradient-to-br from-white/95 via-white/90 to-white/85 backdrop-blur-md rounded-3xl p-8 h-full border-2 border-white/40 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105 group-hover:from-white group-hover:via-white/95 group-hover:to-white/90">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:from-orange-400 group-hover:to-orange-500 shadow-lg">
                     <IconComponent className="h-8 w-8 text-white" />
                   </div>
                   
-                  <h3 className="font-bold text-xl text-white mb-3">{step.title}</h3>
-                  <p className="text-white/80 text-sm mb-4 font-medium">{step.description}</p>
-                  <p className="text-white/70 text-sm leading-relaxed">{step.details}</p>
+                  <h3 className="font-bold text-xl text-gray-800 mb-3 group-hover:text-orange-600 transition-colors duration-300">{step.title}</h3>
+                  <p className="text-orange-600 text-sm mb-4 font-semibold">{step.description}</p>
+                  <p className="text-gray-700 text-sm leading-relaxed">{step.details}</p>
                 </div>
               </motion.div>
             );
