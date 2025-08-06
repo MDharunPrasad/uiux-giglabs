@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import TrustedPartners from "@/components/TrustedPartners";
 import ProcessSection from "@/components/ProcessSection";
-import ServicesSection from "@/components/ServicesSection";
+import ServicesSection from "@/components/ServicesSection_new";
 import TeamSection from "@/components/TeamSection";
 import Footer from "@/components/Footer";
 

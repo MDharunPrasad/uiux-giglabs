@@ -3,8 +3,14 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Check, Monitor, Code, Figma, Smartphone, Globe, Layers, Palette, Brush, Camera, Eye, Rocket, Target, Package, Image, Printer, FileImage, Presentation, Users } from "lucide-react";
+import { useEffect } from "react";
 
 const Services = () => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   const serviceCategories = [
     {
       title: "Web Design",
