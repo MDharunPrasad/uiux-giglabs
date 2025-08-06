@@ -428,7 +428,7 @@ const Contact = () => {
                     <span className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                     <span className="relative flex items-center">
                       Send Message
-                      <svg className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-2 group-hover:scale-110 duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-2 group-hover:scale-110 duration-300 rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                       </svg>
                     </span>
