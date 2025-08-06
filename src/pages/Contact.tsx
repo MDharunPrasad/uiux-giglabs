@@ -127,7 +127,7 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center border-2 border-orange-500"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary/70 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-white" />
@@ -153,7 +153,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100 relative overflow-hidden backdrop-blur-sm">
+            <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border-2 border-orange-500 relative overflow-hidden backdrop-blur-sm">
               {/* Background decoration with theme colors */}
               <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/15 via-primary/10 to-transparent rounded-full -translate-y-20 translate-x-20"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-primary/10 via-primary/5 to-transparent rounded-full translate-y-16 -translate-x-16"></div>
@@ -204,7 +204,7 @@ const Contact = () => {
                         required
                         value={formData.fullName}
                         onChange={handleInputChange}
-                        className="w-full px-5 py-4 border-2 border-gray-200/80 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg"
+                        className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg"
                         placeholder="Enter your full name"
                       />
                       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/8 to-primary/4 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -230,7 +230,7 @@ const Contact = () => {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-5 py-4 border-2 border-gray-200/80 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg"
+                        className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg"
                         placeholder="your.email@example.com"
                       />
                       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/8 to-primary/4 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -256,7 +256,7 @@ const Contact = () => {
                         required
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-5 py-4 border-2 border-gray-200/80 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg"
+                        className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg"
                         placeholder="+1 (555) 123-4567"
                       />
                       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/8 to-primary/4 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -282,7 +282,7 @@ const Contact = () => {
                         required
                         value={formData.businessName}
                         onChange={handleInputChange}
-                        className="w-full px-5 py-4 border-2 border-gray-200/80 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg"
+                        className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg"
                         placeholder="Your company name"
                       />
                       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/8 to-primary/4 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -307,7 +307,7 @@ const Contact = () => {
                         name="currentWebsite"
                         value={formData.currentWebsite}
                         onChange={handleInputChange}
-                        className="w-full px-5 py-4 border-2 border-gray-200/80 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg"
+                        className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg"
                         placeholder="https://www.yourwebsite.com"
                       />
                       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/8 to-primary/4 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -332,7 +332,7 @@ const Contact = () => {
                         required
                         value={formData.serviceInquiry}
                         onChange={handleInputChange}
-                        className="w-full px-5 py-4 border-2 border-gray-200/80 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground appearance-none cursor-pointer shadow-sm hover:shadow-md focus:shadow-lg"
+                        className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground appearance-none cursor-pointer shadow-sm hover:shadow-md focus:shadow-lg"
                       >
                         <option value="">Select a service</option>
                         {serviceOptions.map((service, index) => (
@@ -369,7 +369,7 @@ const Contact = () => {
                       required
                       value={formData.budgetRange}
                       onChange={handleInputChange}
-                      className="w-full px-5 py-4 border-2 border-gray-200/80 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground appearance-none cursor-pointer shadow-sm hover:shadow-md focus:shadow-lg"
+                      className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground appearance-none cursor-pointer shadow-sm hover:shadow-md focus:shadow-lg"
                     >
                       <option value="">Select your budget range</option>
                       {budgetOptions.map((budget, index) => (
@@ -405,7 +405,7 @@ const Contact = () => {
                       rows={5}
                       value={formData.additionalInfo}
                       onChange={handleInputChange}
-                      className="w-full px-5 py-4 border-2 border-gray-200/80 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 resize-none shadow-sm hover:shadow-md focus:shadow-lg"
+                      className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 resize-none shadow-sm hover:shadow-md focus:shadow-lg"
                       placeholder="Tell us about your project goals, timeline, or any specific requirements..."
                     />
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/8 to-primary/4 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -598,12 +598,12 @@ const Contact = () => {
                 <div className="absolute inset-0 bg-red-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
                 <div className="relative z-10">
                   <div className="w-12 h-12 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-12 h-12" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M121.1,57.9L99.1,74.3v35.8h15.4c3.6,0,6.6-2.9,6.6-6.6V57.9z" fill="#4CAF50"/>
-                      <path d="M28.9,57.9l21.9,16.5v35.8H35.5c-3.6,0-6.6-2.9-6.6-6.6V57.9z" fill="#1E88E5"/>
-                      <polygon points="99.1,46.9 75,65 50.9,46.9 50.9,74.3 75,92.4 99.1,74.3" fill="#E53935"/>
-                      <path d="M28.9,49.3v8.6l21.9,16.5V46.9L44,41.8c-1.6-1.2-3.6-1.9-5.7-1.9l0,0C33.1,39.9,28.9,44.1,28.9,49.3z" fill="#C62828"/>
-                      <path d="M121.1,49.3v8.6L99.1,74.3V46.9l6.9-5.1c1.6-1.2,3.6-1.9,5.7-1.9l0,0C116.9,39.9,121.1,44.1,121.1,49.3z" fill="#FBC02D"/>
+                    <svg className="w-12 h-12" viewBox="0 0 48 48" width="48px" height="48px" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z" fill="#4caf50"/>
+                      <path d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z" fill="#1e88e5"/>
+                      <polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"/>
+                      <path d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z" fill="#c62828"/>
+                      <path d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z" fill="#fbc02d"/>
                     </svg>
                   </div>
                   <span className="text-sm font-semibold text-foreground group-hover:text-red-600 transition-colors duration-300">Gmail</span>
@@ -680,14 +680,14 @@ const Contact = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 relative overflow-hidden backdrop-blur-sm">
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-orange-500 relative overflow-hidden backdrop-blur-sm">
                 {/* Background decorations */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-primary/5 via-primary/2 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
                 
                 <div className="relative z-10">
                   {/* Map iframe with enhanced styling */}
-                  <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 group">
+                  <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-orange-500 group">
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"></div>
                     <iframe 
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2414.9822337398414!2d74.85639813391701!3d12.867848182443554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35b08f42d4aab%3A0x5531aeacffeee4f5!2sGigabyte%20Labs%20Private%20Limited!5e0!3m2!1sen!2sin!4v1754458663819!5m2!1sen!2sin"
