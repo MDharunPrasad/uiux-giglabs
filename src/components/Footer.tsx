@@ -83,7 +83,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-12 relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-green-900 via-green-800 to-green-900 py-16 relative overflow-hidden border-t-2 border-green-700/50">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -92,14 +92,14 @@ const Footer = () => {
         }} />
       </div>
       
-      <div className="container mx-auto px-6 relative">
+      <div className="container mx-auto px-6 relative z-10 max-w-7xl">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* About GIGLABS */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-green-200 bg-clip-text text-transparent">
               GIGLABS
             </h3>
-            <p className="text-blue-100 leading-relaxed">
+            <p className="text-green-100 leading-relaxed text-sm sm:text-base">
               Transforming creative visions into digital reality through innovative design and development solutions.
             </p>
           </div>
@@ -112,7 +112,7 @@ const Footer = () => {
                 <Link 
                   key={index}
                   to={link.href}
-                  className="block text-blue-200 hover:text-white transition-smooth hover:translate-x-1 transform"
+                  className="block text-green-200 hover:text-white transition-all duration-300 hover:translate-x-1 transform text-sm sm:text-base"
                 >
                   {link.name}
                 </Link>
@@ -130,7 +130,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-200 hover:text-white transition-colors duration-300 transform hover:scale-110"
+                  className="text-green-200 hover:text-white transition-all duration-300 transform hover:scale-110 bg-green-800/50 p-2 rounded-lg hover:bg-green-700/70"
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -143,8 +143,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-blue-700/50 pt-6 text-center">
-          <p className="text-blue-300">
+        <div className="border-t border-green-700/50 pt-8 text-center mt-8">
+          <p className="text-green-100 text-sm sm:text-base">
             © 2025 GIGLABS. All Rights Reserved.
           </p>
         </div>

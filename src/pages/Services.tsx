@@ -331,7 +331,7 @@ const Services = () => {
                   
                   <Button 
                     size="lg" 
-                    className="gradient-primary text-white shadow-button hover:shadow-glow transition-spring group mt-6"
+                    className="bg-green-500 hover:bg-green-600 text-white shadow-button hover:shadow-glow transition-spring group mt-6"
                   >
                     Get Started
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -395,7 +395,7 @@ const Services = () => {
               >
                 <Button 
                   size="lg" 
-                  className="bg-orange-500 hover:bg-orange-600 text-white transition-all duration-300 text-lg px-8 py-4 font-semibold shadow-lg hover:shadow-xl"
+                  className="bg-green-500 hover:bg-green-600 text-white transition-all duration-300 text-lg px-8 py-4 font-semibold shadow-lg hover:shadow-xl"
                 >
                   Contact Us Today
                   <ArrowRight className="ml-2 h-5 w-5" />

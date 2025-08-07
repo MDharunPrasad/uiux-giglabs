@@ -44,11 +44,11 @@ const About = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative container mx-auto px-6 py-20 lg:py-28 overflow-hidden">
+        <section className="relative w-full py-20 lg:py-28 overflow-hidden">
           {/* Background Elements */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50/50 -z-10" />
-          <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-400/10 to-blue-600/5 rounded-full blur-3xl -z-10" />
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-br from-blue-500/5 to-blue-700/10 rounded-full blur-3xl -z-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-green-50/50 -z-10 w-full" />
+          <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-green-400/10 to-green-600/5 rounded-full blur-3xl -z-10" />
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-br from-green-500/5 to-green-700/10 rounded-full blur-3xl -z-10" />
           
           <div className="max-w-4xl mx-auto text-center relative">
             <motion.div
@@ -57,14 +57,14 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium mb-6 shadow-soft">
-                <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse-slow" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 text-green-600 rounded-full text-sm font-medium mb-6 shadow-soft">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse-slow" />
                 About GIGLABS
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
                 Digital Transformation &{" "}
-                <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-green-600 via-green-500 to-green-700 bg-clip-text text-transparent">
                   AI Solutions
                 </span>
               </h1>
@@ -88,8 +88,8 @@ const About = () => {
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300, damping: 10 }}
                   >
-                    <div className="relative bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-soft border border-blue-100/50 group-hover:shadow-blue transition-all duration-300">
-                      <div className="text-3xl lg:text-4xl font-bold text-blue-600 mb-2">
+                    <div className="relative bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-soft border border-green-100/50 group-hover:shadow-green transition-all duration-300">
+                      <div className="text-3xl lg:text-4xl font-bold text-green-600 mb-2">
                         {stat.number}
                       </div>
                       <div className="text-sm text-muted-foreground">
@@ -104,7 +104,7 @@ const About = () => {
         </section>
 
         {/* Services Highlight */}
-        <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50 border-y border-blue-100">
+        <section className="py-16 bg-gradient-to-r from-green-50 to-emerald-50 border-y border-green-100">
           <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -139,9 +139,9 @@ const About = () => {
                     className="text-center group"
                     whileHover={{ y: -5 }}
                   >
-                    <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-soft border border-blue-100/50 group-hover:shadow-blue transition-all duration-300 h-full">
-                      <div className={`w-12 h-12 bg-${service.color}-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-${service.color}-200 transition-colors`}>
-                        <IconComponent className={`w-6 h-6 text-${service.color}-600`} />
+                    <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-soft border border-green-100/50 group-hover:shadow-green transition-all duration-300 h-full">
+                      <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
+                        <IconComponent className="w-6 h-6 text-green-600" />
                       </div>
                       <h3 className="font-semibold text-foreground mb-2">{service.title}</h3>
                       <p className="text-sm text-muted-foreground">{service.desc}</p>
@@ -172,14 +172,14 @@ const About = () => {
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-50 text-green-600 rounded-full text-sm font-medium">
                   <Target className="w-4 h-4" />
                   Our Mission
                 </div>
                 
                 <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
                   Accelerating Innovation with{" "}
-                  <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">
                     Integrated Solutions
                   </span>
                 </h2>
@@ -191,19 +191,19 @@ const About = () => {
                   
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0" />
+                      <div className="w-2 h-2 bg-green-600 rounded-full mt-3 flex-shrink-0" />
                       <p className="text-muted-foreground">
                         <strong className="text-foreground">Harnessing Technology:</strong> We solve complex challenges, drive efficiency, and enhance user experiences for our clients.
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0" />
+                      <div className="w-2 h-2 bg-green-600 rounded-full mt-3 flex-shrink-0" />
                       <p className="text-muted-foreground">
                         <strong className="text-foreground">Quality Focus:</strong> We strive to be the premier choice for organizations seeking top-tier software development expertise.
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0" />
+                      <div className="w-2 h-2 bg-green-600 rounded-full mt-3 flex-shrink-0" />
                       <p className="text-muted-foreground">
                         <strong className="text-foreground">Exceeding Expectations:</strong> We deliver cutting-edge solutions that fuel growth in a rapidly evolving digital landscape.
                       </p>
