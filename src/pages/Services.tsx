@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Check, Monitor, Code, Figma, Smartphone, Globe, Layers, Palette, Brush, Camera, Eye, Rocket, Target, Package, Image, Printer, FileImage, Presentation, Users } from "lucide-react";
+import { ArrowRight, Check, Monitor, Code, Figma, Smartphone, Globe, Layers, Palette, Brush, Camera, Eye, Rocket, Target, Package, Image, Printer, FileImage, Presentation, Users, Layout, Zap, MousePointer, Play, Settings, Share2, Megaphone, ShoppingCart } from "lucide-react";
 import { useEffect } from "react";
 
 const Services = () => {
@@ -41,6 +41,118 @@ const Services = () => {
       ]
     },
     {
+      title: "Wireframes",
+      description: "Strategic blueprints that map out your digital product's structure and functionality.",
+      detailedDescription: [
+        "Professional wireframes that serve as the architectural foundation for your digital products, ensuring optimal user flow and functionality.",
+        "Our wireframing process involves detailed user journey mapping and information architecture to create intuitive, user-centered designs."
+      ],
+      features: [
+        "User Flow Mapping",
+        "Information Architecture",
+        "Interactive Wireframes",
+        "Content Strategy",
+        "Navigation Design"
+      ],
+      relatedIcons: [
+        { icon: Layout, label: "Structure Design" },
+        { icon: Layers, label: "Information Architecture" },
+        { icon: MousePointer, label: "User Interaction" },
+        { icon: Globe, label: "Web Framework" },
+        { icon: Smartphone, label: "Mobile Layout" },
+        { icon: Target, label: "User Goals" }
+      ],
+      images: [
+        "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=400&q=80",
+        "/src/assets/wireframe 1.JPG",
+        "/src/assets/wireframe 2.JPG"
+      ]
+    },
+    {
+      title: "Hi-Fi (High Fidelity) Design",
+      description: "Pixel-perfect, detailed designs that bring your vision to life with stunning visual accuracy.",
+      detailedDescription: [
+        "High-fidelity designs that showcase the final look and feel of your product with precise details, colors, and typography.",
+        "Our Hi-Fi designs include comprehensive style guides and detailed specifications for seamless development handoff."
+      ],
+      features: [
+        "Pixel-Perfect Designs",
+        "Visual Style Guides",
+        "Typography Systems",
+        "Color Palettes",
+        "Component Libraries"
+      ],
+      relatedIcons: [
+        { icon: Figma, label: "Design Tools" },
+        { icon: Palette, label: "Color Systems" },
+        { icon: Eye, label: "Visual Details" },
+        { icon: Layers, label: "Design Systems" },
+        { icon: Brush, label: "Creative Design" },
+        { icon: Settings, label: "Design Specs" }
+      ],
+      images: [
+        "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&w=400&q=80"
+      ]
+    },
+    {
+      title: "Web and App Prototypes",
+      description: "Interactive prototypes that demonstrate functionality and user experience before development.",
+      detailedDescription: [
+        "Interactive prototypes that allow you to test and validate your product concepts before investing in full development.",
+        "Our prototyping process includes user testing and iteration to ensure the final product meets user needs and business objectives."
+      ],
+      features: [
+        "Interactive Prototypes",
+        "User Testing",
+        "Animation & Transitions",
+        "Click-through Demos",
+        "Feedback Integration"
+      ],
+      relatedIcons: [
+        { icon: Play, label: "Interactive Demo" },
+        { icon: MousePointer, label: "User Interaction" },
+        { icon: Zap, label: "Quick Prototyping" },
+        { icon: Smartphone, label: "Mobile Prototypes" },
+        { icon: Monitor, label: "Web Prototypes" },
+        { icon: Users, label: "User Testing" }
+      ],
+      images: [
+        "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80"
+      ]
+    },
+    {
+      title: "WordPress Sites",
+      description: "Custom WordPress websites that are easy to manage and built for performance.",
+      detailedDescription: [
+        "Professional WordPress websites that combine beautiful design with powerful functionality and easy content management.",
+        "Our WordPress development includes custom themes, plugin integration, and optimization for speed, security, and SEO."
+      ],
+      features: [
+        "Custom WordPress Themes",
+        "Plugin Integration",
+        "SEO Optimization",
+        "Performance Optimization",
+        "Content Management Training"
+      ],
+      relatedIcons: [
+        { icon: Globe, label: "WordPress CMS" },
+        { icon: Code, label: "Custom Development" },
+        { icon: Rocket, label: "Performance" },
+        { icon: Target, label: "SEO Focused" },
+        { icon: Settings, label: "Plugin Integration" },
+        { icon: Users, label: "User Management" }
+      ],
+      images: [
+        "https://uanvi.com/wp-content/uploads/2022/04/WordPress.jpg",
+        "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80"
+      ]
+    },
+    {
       title: "Logo Design", 
       description: "Memorable brand identities that make your business stand out.",
       detailedDescription: [
@@ -63,9 +175,37 @@ const Services = () => {
         { icon: Users, label: "Brand Strategy" }
       ],
       images: [
-        "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=400&q=80"
+        "/src/assets/logo1.JPG",
+        "/src/assets/logo2.JPG",
+        "/src/assets/logo3.JPG"
+      ]
+    },
+    {
+      title: "Social Media Banners",
+      description: "Eye-catching social media graphics that boost engagement and brand awareness.",
+      detailedDescription: [
+        "Professional social media banners and graphics designed to maximize engagement across all major platforms.",
+        "Our social media designs are optimized for each platform's specifications and designed to capture attention in crowded feeds."
+      ],
+      features: [
+        "Platform-Specific Sizing",
+        "Brand-Consistent Designs",
+        "Engagement-Focused Graphics",
+        "Template Creation",
+        "Multi-Platform Optimization"
+      ],
+      relatedIcons: [
+        { icon: Share2, label: "Social Sharing" },
+        { icon: Image, label: "Visual Content" },
+        { icon: Users, label: "Social Engagement" },
+        { icon: Target, label: "Audience Targeting" },
+        { icon: Brush, label: "Creative Design" },
+        { icon: Zap, label: "Quick Delivery" }
+      ],
+      images: [
+        "/src/assets/poster3.JPG",
+        "/src/assets/poster2.JPG",
+        "/src/assets/poster.JPG"
       ]
     },
     {
@@ -91,13 +231,41 @@ const Services = () => {
         { icon: Rocket, label: "Product Launch" }
       ],
       images: [
-        "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=400&q=80"
+        "/src/assets/product mu.JPG",
+        "/src/assets/product mu2.JPG",
+        "/src/assets/product mu3.JPG", 
       ]
     },
     {
-      title: "Brand and Visuals",
+      title: "Advertisement Mockups",
+      description: "Compelling advertisement designs that drive conversions and build brand recognition.",
+      detailedDescription: [
+        "Professional advertisement mockups for print and digital campaigns that capture attention and drive action.",
+        "Our advertisement designs combine persuasive copywriting with striking visuals to maximize campaign effectiveness and ROI."
+      ],
+      features: [
+        "Print Advertisement Design",
+        "Digital Ad Campaigns",
+        "Billboard & Poster Design",
+        "Social Media Ads",
+        "Campaign Strategy"
+      ],
+      relatedIcons: [
+        { icon: Megaphone, label: "Advertising" },
+        { icon: Target, label: "Campaign Targeting" },
+        { icon: Eye, label: "Visual Impact" },
+        { icon: Printer, label: "Print Ads" },
+        { icon: Monitor, label: "Digital Ads" },
+        { icon: ShoppingCart, label: "Conversion Focus" }
+      ],
+      images: [
+        "/src/assets/mockup1.JPG",
+        "/src/assets/mockup2.JPG",
+        "/src/assets/mockup1.JPG"
+      ]
+    },
+    {
+      title: "Brand and Visual Design",
       description: "Comprehensive visual strategies that tell your brand story.",
       detailedDescription: [
         "Complete visual brand strategies that create consistent, memorable experiences across all customer touchpoints.",
@@ -271,7 +439,7 @@ const Services = () => {
         ))}
 
         {/* CTA Section */}
-        <section className="section-gradient py-24">
+        <section className="bg-slate-50 py-24">
           <div className="container mx-auto px-6 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -280,20 +448,24 @@ const Services = () => {
               viewport={{ once: true }}
               className="max-w-3xl mx-auto"
             >
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Ready to Start Your Project?
               </h2>
-              <p className="text-xl text-white/80 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Let's collaborate to bring your vision to life with our expert design and development services.
               </p>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-primary transition-smooth text-lg px-8 py-4"
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Contact Us Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+                <Button 
+                  size="lg" 
+                  className="bg-orange-500 hover:bg-orange-600 text-white transition-all duration-300 text-lg px-8 py-4 font-semibold shadow-lg hover:shadow-xl"
+                >
+                  Contact Us Today
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </motion.div>
             </motion.div>
           </div>
         </section>
