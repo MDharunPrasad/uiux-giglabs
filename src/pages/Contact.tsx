@@ -137,9 +137,9 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center border-2 border-green-200 md:border-green-500"
+                  className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center border-2 border-blue-200 md:border-primary"
                 >
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <div className="w-12 h-12 md:w-16 md:h-16 gradient-primary rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
                     <IconComponent className="w-6 h-6 md:w-8 md:h-8 text-white" />
                   </div>
                   <h3 className="text-base md:text-lg font-semibold text-foreground mb-2 md:mb-3">{info.title}</h3>
@@ -163,10 +163,10 @@ const Contact = () => {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <div className="bg-white rounded-3xl p-6 md:p-8 lg:p-10 shadow-xl border border-green-200 relative overflow-hidden backdrop-blur-sm">
+            <div className="bg-white rounded-3xl p-6 md:p-8 lg:p-10 shadow-xl border border-blue-200 relative overflow-hidden backdrop-blur-sm">
               {/* Background decoration with theme colors */}
-              <div className="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-green-500/10 via-green-600/5 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-tr from-green-500/8 via-green-600/3 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-tr from-primary/8 via-primary/3 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
               
               <div className="text-center mb-8 relative z-10">
                 <motion.h2 
@@ -176,7 +176,7 @@ const Contact = () => {
                   viewport={{ once: true }}
                   className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3"
                 >
-                  <span className="bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                     Start Your Project
                   </span>
                 </motion.h2>
@@ -201,7 +201,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="group"
                   >
-                    <label htmlFor="fullName" className="block text-sm font-semibold text-foreground mb-2 group-focus-within:text-green-600 transition-colors duration-300">
+                    <label htmlFor="fullName" className="block text-sm font-semibold text-foreground mb-2 group-focus-within:text-primary transition-colors duration-300">
                       Full Name *
                     </label>
                     <div className="relative">
@@ -212,7 +212,7 @@ const Contact = () => {
                         required
                         value={formData.fullName}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all duration-300 bg-gray-50/50 hover:bg-white hover:border-green-500/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg text-sm md:text-base"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gray-50/50 hover:bg-white hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg text-sm md:text-base"
                         placeholder="Enter your full name"
                       />
                     </div>
@@ -226,7 +226,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="group"
                   >
-                    <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2 group-focus-within:text-green-600 transition-colors duration-300">
+                    <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2 group-focus-within:text-primary transition-colors duration-300">
                       Email Address *
                     </label>
                     <div className="relative">
@@ -237,7 +237,7 @@ const Contact = () => {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all duration-300 bg-gray-50/50 hover:bg-white hover:border-green-500/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg text-sm md:text-base"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gray-50/50 hover:bg-white hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg text-sm md:text-base"
                         placeholder="your.email@example.com"
                       />
                     </div>
@@ -251,7 +251,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="group"
                   >
-                    <label htmlFor="phone" className="block text-sm font-semibold text-foreground mb-2 group-focus-within:text-green-600 transition-colors duration-300">
+                    <label htmlFor="phone" className="block text-sm font-semibold text-foreground mb-2 group-focus-within:text-primary transition-colors duration-300">
                       Phone Number *
                     </label>
                     <div className="relative">
@@ -262,7 +262,7 @@ const Contact = () => {
                         required
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all duration-300 bg-gray-50/50 hover:bg-white hover:border-green-500/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg text-sm md:text-base"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gray-50/50 hover:bg-white hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg text-sm md:text-base"
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
@@ -485,7 +485,7 @@ const Contact = () => {
                 viewport={{ once: true }}
                 className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-pink-200 relative overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/70 to-primary/50 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
                 <div className="relative z-10">
                   <div className="w-12 h-12 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-12 h-12" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
@@ -656,14 +656,14 @@ const Contact = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-orange-500 relative overflow-hidden backdrop-blur-sm">
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-primary relative overflow-hidden backdrop-blur-sm">
                 {/* Background decorations */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-primary/5 via-primary/2 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
                 
                 <div className="relative z-10">
                   {/* Map iframe with enhanced styling */}
-                  <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-orange-500 group">
+                  <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-primary group">
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"></div>
                     <iframe 
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2414.9822337398414!2d74.85639813391701!3d12.867848182443554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35b08f42d4aab%3A0x5531aeacffeee4f5!2sGigabyte%20Labs%20Private%20Limited!5e0!3m2!1sen!2sin!4v1754458663819!5m2!1sen!2sin"

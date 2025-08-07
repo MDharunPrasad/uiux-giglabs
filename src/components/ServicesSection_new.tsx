@@ -75,7 +75,7 @@ const ServicesSection = () => {
           <h2 className="text-5xl font-bold text-gray-800 mb-6">
             Professional Design & 
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70">
               Development Services
             </span>
           </h2>
@@ -89,9 +89,9 @@ const ServicesSection = () => {
             const IconComponent = service.icon;
             return (
               <div key={index} className="group">
-                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 p-8 h-full border border-gray-100 hover:border-orange-200">
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 p-8 h-full border border-gray-100 hover:border-blue-200">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="bg-gradient-to-br from-orange-500 to-red-600 p-4 rounded-xl shadow-lg">
+                    <div className="gradient-primary p-4 rounded-xl shadow-lg">
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-3xl font-bold text-gray-800">{service.category}</h3>
@@ -106,7 +106,7 @@ const ServicesSection = () => {
                     <div className="grid grid-cols-1 gap-3">
                       {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center gap-3">
-                          <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-red-600 rounded-full"></div>
+                          <div className="w-2 h-2 bg-gradient-to-r from-primary to-primary/70 rounded-full"></div>
                           <span className="text-gray-700">{feature}</span>
                         </div>
                       ))}
@@ -118,8 +118,8 @@ const ServicesSection = () => {
                       const IconComponent = iconItem.icon;
                       return (
                         <div key={iconIndex} className="flex flex-col items-center group/icon">
-                          <div className="bg-gray-100 p-3 rounded-lg group-hover/icon:bg-orange-100 transition-colors duration-300">
-                            <IconComponent className="w-6 h-6 text-gray-600 group-hover/icon:text-orange-600 transition-colors duration-300" />
+                          <div className="bg-gray-100 p-3 rounded-lg group-hover/icon:bg-blue-100 transition-colors duration-300">
+                            <IconComponent className="w-6 h-6 text-gray-600 group-hover/icon:text-primary transition-colors duration-300" />
                           </div>
                           <div className="text-xs text-gray-500 mt-2 text-center">
                             {iconItem.label}

@@ -21,11 +21,11 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-white/95 backdrop-blur-sm border-b border-green-100 sticky top-0 z-50 shadow-soft">
+    <nav className="bg-white/95 backdrop-blur-sm border-b border-blue-100 sticky top-0 z-50 shadow-soft">
       <div className="container mx-auto px-4 md:px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">
+          <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
             GIGLABS
           </div>
 
@@ -37,8 +37,8 @@ const Navigation = () => {
                 to={link.path} 
                 className={`transition-smooth relative ${
                   isActive(link.path) 
-                    ? 'text-green-600 font-semibold after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-green-600 after:rounded-full' 
-                    : 'text-foreground hover:text-green-600'
+                    ? 'text-primary font-semibold after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full' 
+                    : 'text-foreground hover:text-primary'
                 }`}
               >
                 {link.label}
@@ -57,7 +57,7 @@ const Navigation = () => {
             {/* WhatsApp Button */}
             <Button 
               onClick={handleWhatsAppClick}
-              className="bg-green-500 hover:bg-green-600 text-white px-3 md:px-6 py-2 md:py-3 rounded-full flex items-center gap-2 md:gap-3 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base"
+              className="gradient-primary text-white px-3 md:px-6 py-2 md:py-3 rounded-full flex items-center gap-2 md:gap-3 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base"
               title="Chat on WhatsApp"
             >
               <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
@@ -67,7 +67,7 @@ const Navigation = () => {
             {/* Mobile Menu Toggle */}
             <Button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-md hover:bg-green-50 transition-colors duration-200 text-green-600"
+              className="lg:hidden p-2 rounded-md hover:bg-blue-50 transition-colors duration-200 text-primary"
               variant="ghost"
               size="sm"
             >
@@ -87,8 +87,8 @@ const Navigation = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className={`transition-smooth text-center py-2 px-4 rounded-md ${
                     isActive(link.path) 
-                      ? 'text-green-600 font-semibold bg-green-50' 
-                      : 'text-foreground hover:text-green-600 hover:bg-green-50'
+                      ? 'text-primary font-semibold bg-blue-50' 
+                      : 'text-foreground hover:text-primary hover:bg-blue-50'
                   }`}
                 >
                   {link.label}

@@ -76,18 +76,18 @@ const ProcessSection = () => {
                 className="relative"
               >
                 {/* Step Number */}
-                <div className="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-br from-white via-orange-50 to-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold text-lg z-10 shadow-lg border-2 border-white">
+                <div className="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-full flex items-center justify-center text-primary font-bold text-lg z-10 shadow-lg border-2 border-white">
                   {index + 1}
                 </div>
                 
                 {/* Card */}
                 <div className="bg-gradient-to-br from-white/95 via-white/90 to-white/85 backdrop-blur-md rounded-3xl p-8 h-full border-2 border-white/40 shadow-xl">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                  <div className="w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                     <IconComponent className="h-8 w-8 text-white" />
                   </div>
                   
                   <h3 className="font-bold text-xl text-gray-800 mb-3">{step.title}</h3>
-                  <p className="text-orange-600 text-sm mb-4 font-semibold">{step.description}</p>
+                  <p className="text-primary text-sm mb-4 font-semibold">{step.description}</p>
                   <p className="text-gray-700 text-sm leading-relaxed">{step.details}</p>
                 </div>
               </motion.div>

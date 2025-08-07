@@ -13,7 +13,7 @@ const Footer = () => {
     { 
       name: "WhatsApp", 
       href: "https://wa.me/1234567890", 
-      color: "text-green-400",
+      color: "text-blue-400",
       svg: (
         <svg className="w-6 h-6" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -83,7 +83,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-green-900 via-green-800 to-green-900 py-16 relative overflow-hidden border-t-2 border-green-700/50">
+    <footer className="bg-gradient-to-br from-primary via-primary/90 to-primary py-16 relative overflow-hidden border-t-2 border-primary/50">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -96,10 +96,10 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* About GIGLABS */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-green-200 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               GIGLABS
             </h3>
-            <p className="text-green-100 leading-relaxed text-sm sm:text-base">
+            <p className="text-blue-100 leading-relaxed text-sm sm:text-base">
               Transforming creative visions into digital reality through innovative design and development solutions.
             </p>
           </div>
@@ -112,7 +112,7 @@ const Footer = () => {
                 <Link 
                   key={index}
                   to={link.href}
-                  className="block text-green-200 hover:text-white transition-all duration-300 hover:translate-x-1 transform text-sm sm:text-base"
+                  className="block text-blue-200 hover:text-white transition-all duration-300 hover:translate-x-1 transform text-sm sm:text-base"
                 >
                   {link.name}
                 </Link>
@@ -130,7 +130,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-green-200 hover:text-white transition-all duration-300 transform hover:scale-110 bg-green-800/50 p-2 rounded-lg hover:bg-green-700/70"
+                  className="text-primary hover:text-primary/80 transition-all duration-300 transform hover:scale-110 bg-white p-2 rounded-lg hover:bg-white/90 shadow-md hover:shadow-lg"
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -143,8 +143,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-green-700/50 pt-8 text-center mt-8">
-          <p className="text-green-100 text-sm sm:text-base">
+        <div className="border-t border-primary/50 pt-8 text-center mt-8">
+          <p className="text-blue-100 text-sm sm:text-base">
             © 2025 GIGLABS. All Rights Reserved.
           </p>
         </div>
