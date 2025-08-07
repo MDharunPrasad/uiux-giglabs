@@ -41,19 +41,29 @@ const Contact = () => {
   ];
 
   const serviceOptions = [
-    "Website Design",
-    "Website Development", 
+    "Web Design",
+    "Wireframes", 
+    "Hi-Fi (High Fidelity) Design",
+    "Web and App Prototypes",
+    "WordPress Sites",
+    "Logo Design",
+    "Social Media Banners", 
+    "Product Mockups",
+    "Advertisement Mockups",
+    "Brand and Visual Design",
+    "Website Development",
     "Graphic Design",
-    "Animation"
+    "Animation",
+    "UI/UX Consultation"
   ];
 
   const budgetOptions = [
-    "$1,000 - $5,000",
-    "$5,000 - $10,000",
-    "$10,000 - $25,000",
-    "$25,000 - $50,000",
-    "$50,000+",
-    "Hourly Rates ($50-150/hr)"
+    "₹10,000 - ₹50,000",
+    "₹50,000 - ₹1,00,000", 
+    "₹1,00,000 - ₹2,50,000",
+    "₹2,50,000 - ₹5,00,000",
+    "₹5,00,000+",
+    "Hourly Rates (₹500-1500/hr)"
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -96,28 +106,28 @@ const Contact = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="container mx-auto px-6 py-24">
+        <section className="container mx-auto px-4 md:px-6 py-16 md:py-20 lg:py-24">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
               Get In{" "}
               <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                 Touch
               </span>
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-base md:text-xl text-muted-foreground leading-relaxed px-4">
               Ready to transform your ideas into reality? Let's discuss your project and bring your vision to life.
             </p>
           </motion.div>
         </section>
 
         {/* Contact Info Cards */}
-        <section className="container mx-auto px-6 py-16">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <section className="container mx-auto px-4 md:px-6 py-8 md:py-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-20">
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
               return (
@@ -127,15 +137,15 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center border-2 border-orange-500"
+                  className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center border-2 border-orange-200 md:border-orange-500"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary/70 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-white" />
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-primary to-primary/70 rounded-xl md:rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
+                    <IconComponent className="w-6 h-6 md:w-8 md:h-8 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">{info.title}</h3>
+                  <h3 className="text-base md:text-lg font-semibold text-foreground mb-2 md:mb-3">{info.title}</h3>
                   <div className="space-y-1">
                     {info.details.map((detail, detailIndex) => (
-                      <p key={detailIndex} className="text-muted-foreground text-sm">
+                      <p key={detailIndex} className="text-muted-foreground text-xs md:text-sm">
                         {detail}
                       </p>
                     ))}
@@ -153,20 +163,18 @@ const Contact = () => {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border-2 border-orange-500 relative overflow-hidden backdrop-blur-sm">
+            <div className="bg-white rounded-3xl p-6 md:p-8 lg:p-10 shadow-xl border border-orange-200 relative overflow-hidden backdrop-blur-sm">
               {/* Background decoration with theme colors */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/15 via-primary/10 to-transparent rounded-full -translate-y-20 translate-x-20"></div>
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-primary/10 via-primary/5 to-transparent rounded-full translate-y-16 -translate-x-16"></div>
-              <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-primary/30 rounded-full animate-pulse"></div>
-              <div className="absolute top-1/3 left-1/4 w-1 h-1 bg-primary/40 rounded-full animate-pulse delay-1000"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-tr from-primary/8 via-primary/3 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
               
-              <div className="text-center mb-12 relative z-10">
+              <div className="text-center mb-8 relative z-10">
                 <motion.h2 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
-                  className="text-3xl lg:text-4xl font-bold text-foreground mb-4"
+                  className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3"
                 >
                   <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                     Start Your Project
@@ -177,14 +185,14 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                   viewport={{ once: true }}
-                  className="text-lg text-muted-foreground"
+                  className="text-base md:text-lg text-muted-foreground"
                 >
                   Fill out the form below and we'll get back to you within 24 hours.
                 </motion.p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
-                <div className="grid md:grid-cols-2 gap-8">
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6 relative z-10">
+                <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                   {/* Full Name */}
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
@@ -193,7 +201,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="group"
                   >
-                    <label htmlFor="fullName" className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors duration-300">
+                    <label htmlFor="fullName" className="block text-sm font-semibold text-foreground mb-2 group-focus-within:text-primary transition-colors duration-300">
                       Full Name *
                     </label>
                     <div className="relative">
@@ -204,10 +212,9 @@ const Contact = () => {
                         required
                         value={formData.fullName}
                         onChange={handleInputChange}
-                        className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gray-50/50 hover:bg-white hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg text-sm md:text-base"
                         placeholder="Enter your full name"
                       />
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/8 to-primary/4 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                     </div>
                   </motion.div>
 
@@ -219,7 +226,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="group"
                   >
-                    <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors duration-300">
+                    <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2 group-focus-within:text-primary transition-colors duration-300">
                       Email Address *
                     </label>
                     <div className="relative">
@@ -230,10 +237,9 @@ const Contact = () => {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gray-50/50 hover:bg-white hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg text-sm md:text-base"
                         placeholder="your.email@example.com"
                       />
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/8 to-primary/4 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                     </div>
                   </motion.div>
 
@@ -245,7 +251,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="group"
                   >
-                    <label htmlFor="phone" className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors duration-300">
+                    <label htmlFor="phone" className="block text-sm font-semibold text-foreground mb-2 group-focus-within:text-primary transition-colors duration-300">
                       Phone Number *
                     </label>
                     <div className="relative">
@@ -256,10 +262,9 @@ const Contact = () => {
                         required
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gray-50/50 hover:bg-white hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg text-sm md:text-base"
                         placeholder="+1 (555) 123-4567"
                       />
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/8 to-primary/4 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                     </div>
                   </motion.div>
 
@@ -271,7 +276,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="group"
                   >
-                    <label htmlFor="businessName" className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors duration-300">
+                    <label htmlFor="businessName" className="block text-sm font-semibold text-foreground mb-2 group-focus-within:text-primary transition-colors duration-300">
                       Business Name *
                     </label>
                     <div className="relative">
@@ -282,14 +287,13 @@ const Contact = () => {
                         required
                         value={formData.businessName}
                         onChange={handleInputChange}
-                        className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gray-50/50 hover:bg-white hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg text-sm md:text-base"
                         placeholder="Your company name"
                       />
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/8 to-primary/4 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                     </div>
                   </motion.div>
 
-                  {/* Current Website */}
+                  {/* Service Inquiry */}
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -297,32 +301,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="group"
                   >
-                    <label htmlFor="currentWebsite" className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors duration-300">
-                      Current Website <span className="text-muted-foreground font-normal">(Optional)</span>
-                    </label>
-                    <div className="relative">
-                      <input
-                        type="url"
-                        id="currentWebsite"
-                        name="currentWebsite"
-                        value={formData.currentWebsite}
-                        onChange={handleInputChange}
-                        className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg"
-                        placeholder="https://www.yourwebsite.com"
-                      />
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/8 to-primary/4 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                    </div>
-                  </motion.div>
-
-                  {/* Service Inquiry */}
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                    viewport={{ once: true }}
-                    className="group"
-                  >
-                    <label htmlFor="serviceInquiry" className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors duration-300">
+                    <label htmlFor="serviceInquiry" className="block text-sm font-semibold text-foreground mb-2 group-focus-within:text-primary transition-colors duration-300">
                       Service Inquiry *
                     </label>
                     <div className="relative">
@@ -332,7 +311,7 @@ const Contact = () => {
                         required
                         value={formData.serviceInquiry}
                         onChange={handleInputChange}
-                        className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground appearance-none cursor-pointer shadow-sm hover:shadow-md focus:shadow-lg"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gray-50/50 hover:bg-white hover:border-primary/30 text-foreground appearance-none cursor-pointer shadow-sm hover:shadow-md focus:shadow-lg text-sm md:text-base"
                       >
                         <option value="">Select a service</option>
                         {serviceOptions.map((service, index) => (
@@ -341,17 +320,51 @@ const Contact = () => {
                           </option>
                         ))}
                       </select>
-                      <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
-                        <svg className="w-5 h-5 text-primary/60 group-focus-within:text-primary transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                        <svg className="w-4 h-4 text-primary/60 group-focus-within:text-primary transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
                       </div>
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/8 to-primary/4 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+                  </motion.div>
+
+                  {/* Budget Range */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.6 }}
+                    viewport={{ once: true }}
+                    className="group"
+                  >
+                    <label htmlFor="budgetRange" className="block text-sm font-semibold text-foreground mb-2 group-focus-within:text-primary transition-colors duration-300">
+                      Budget Range *
+                    </label>
+                    <div className="relative">
+                      <select
+                        id="budgetRange"
+                        name="budgetRange"
+                        required
+                        value={formData.budgetRange}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gray-50/50 hover:bg-white hover:border-primary/30 text-foreground appearance-none cursor-pointer shadow-sm hover:shadow-md focus:shadow-lg text-sm md:text-base"
+                      >
+                        <option value="">Select your budget range</option>
+                        {budgetOptions.map((budget, index) => (
+                          <option key={index} value={budget}>
+                            {budget}
+                          </option>
+                        ))}
+                      </select>
+                      <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                        <svg className="w-4 h-4 text-primary/60 group-focus-within:text-primary transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
                     </div>
                   </motion.div>
                 </div>
 
-                {/* Budget Range */}
+                {/* Additional Information - Made it single column and shorter */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -359,56 +372,19 @@ const Contact = () => {
                   viewport={{ once: true }}
                   className="group"
                 >
-                  <label htmlFor="budgetRange" className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors duration-300">
-                    Budget Range *
-                  </label>
-                  <div className="relative">
-                    <select
-                      id="budgetRange"
-                      name="budgetRange"
-                      required
-                      value={formData.budgetRange}
-                      onChange={handleInputChange}
-                      className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground appearance-none cursor-pointer shadow-sm hover:shadow-md focus:shadow-lg"
-                    >
-                      <option value="">Select your budget range</option>
-                      {budgetOptions.map((budget, index) => (
-                        <option key={index} value={budget}>
-                          {budget}
-                        </option>
-                      ))}
-                    </select>
-                    <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none">
-                      <svg className="w-5 h-5 text-primary/60 group-focus-within:text-primary transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </div>
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/8 to-primary/4 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                  </div>
-                </motion.div>
-
-                {/* Additional Information */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
-                  viewport={{ once: true }}
-                  className="group"
-                >
-                  <label htmlFor="additionalInfo" className="block text-sm font-semibold text-foreground mb-3 group-focus-within:text-primary transition-colors duration-300">
+                  <label htmlFor="additionalInfo" className="block text-sm font-semibold text-foreground mb-2 group-focus-within:text-primary transition-colors duration-300">
                     Anything else we should know?
                   </label>
                   <div className="relative">
                     <textarea
                       id="additionalInfo"
                       name="additionalInfo"
-                      rows={5}
+                      rows={3}
                       value={formData.additionalInfo}
                       onChange={handleInputChange}
-                      className="w-full px-5 py-4 border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gradient-to-r from-gray-50/80 to-gray-50/40 hover:from-white hover:to-white/90 hover:border-primary/30 text-foreground placeholder-gray-400 resize-none shadow-sm hover:shadow-md focus:shadow-lg"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-gray-50/50 hover:bg-white hover:border-primary/30 text-foreground placeholder-gray-400 resize-none shadow-sm hover:shadow-md focus:shadow-lg text-sm md:text-base"
                       placeholder="Tell us about your project goals, timeline, or any specific requirements..."
                     />
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/8 to-primary/4 opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                   </div>
                 </motion.div>
 
@@ -416,19 +392,19 @@ const Contact = () => {
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.9 }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
                   viewport={{ once: true }}
-                  className="text-center pt-6"
+                  className="text-center pt-4"
                 >
                   <Button 
                     type="submit"
                     size="lg" 
-                    className="gradient-primary text-white shadow-button hover:shadow-glow transition-spring group px-16 py-5 text-lg font-semibold rounded-2xl relative overflow-hidden transform hover:scale-105 active:scale-95"
+                    className="gradient-primary text-white shadow-button hover:shadow-glow transition-spring group px-8 md:px-12 py-3 md:py-4 text-base md:text-lg font-semibold rounded-xl relative overflow-hidden transform hover:scale-105 active:scale-95 w-full sm:w-auto"
                   >
                     <span className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    <span className="relative flex items-center">
+                    <span className="relative flex items-center justify-center">
                       Send Message
-                      <svg className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-2 group-hover:scale-110 duration-300 rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="ml-2 h-4 w-4 md:h-5 md:w-5 transition-transform group-hover:translate-x-1 group-hover:scale-110 duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                       </svg>
                     </span>
@@ -436,12 +412,12 @@ const Contact = () => {
                   <motion.p 
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 1 }}
+                    transition={{ duration: 0.5, delay: 0.9 }}
                     viewport={{ once: true }}
-                    className="text-sm text-muted-foreground mt-4 flex items-center justify-center gap-2"
+                    className="text-xs md:text-sm text-muted-foreground mt-3 flex items-center justify-center gap-2"
                   >
-                    <span className="inline-block w-4 h-4 bg-gradient-to-r from-primary to-primary/70 rounded-full flex items-center justify-center">
-                      <svg className="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <span className="w-3 h-3 md:w-4 md:h-4 bg-gradient-to-r from-primary to-primary/70 rounded-full flex items-center justify-center">
+                      <svg className="w-1.5 h-1.5 md:w-2 md:h-2 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
                       </svg>
                     </span>
@@ -454,7 +430,7 @@ const Contact = () => {
         </section>
 
         {/* Connect With Us Section */}
-        <section className="container mx-auto px-6 py-20">
+        <section className="container mx-auto px-4 md:px-6 py-12 md:py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -463,13 +439,13 @@ const Contact = () => {
             className="max-w-4xl mx-auto text-center"
           >
             {/* Trust Building Message */}
-            <div className="mb-16">
+            <div className="mb-12 md:mb-16">
               <motion.h2 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-3xl lg:text-4xl font-bold text-foreground mb-6"
+                className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 md:mb-6"
               >
                 Let's Connect & Create{" "}
                 <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
@@ -481,7 +457,7 @@ const Contact = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto"
+                className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto px-4"
               >
                 Join our community of innovators and stay updated with our latest projects. 
                 Follow us on social media for design insights, behind-the-scenes content, and industry trends.
@@ -494,7 +470,7 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-3xl mx-auto"
+              className="grid grid-cols-3 sm:grid-cols-5 gap-3 md:gap-4 max-w-3xl mx-auto"
             >
               {/* Instagram */}
               <motion.a

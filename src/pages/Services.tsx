@@ -13,26 +13,29 @@ const Services = () => {
 
   const serviceCategories = [
     {
-      title: "Web Design",
-      description: "Creating stunning, user-focused designs that convert visitors into customers.",
+      title: "UI/UX Web Design (Complete Solution)",
+      description: "End-to-end web design solutions from concept to high-fidelity designs, including wireframes and prototypes.",
       detailedDescription: [
-        "We specialize in creating modern, responsive websites that provide exceptional user experiences across all devices.",
-        "Our web design process focuses on understanding your business goals and target audience to deliver designs that drive conversions."
+        "Our comprehensive UI/UX web design service covers the entire design journey from initial concept to pixel-perfect final designs.",
+        "We follow a systematic approach: Research → Low-Fi Wireframes → High-Fi Wireframes → Interactive Prototypes → Final UI Design."
       ],
       features: [
-        "Custom Website Design",
-        "Responsive Layouts",
-        "User Experience (UX) Design",
-        "User Interface (UI) Design",
-        "Wireframing & Prototyping"
+        "User Research & Analysis",
+        "Information Architecture",
+        "Low-Fidelity Wireframes",
+        "High-Fidelity Wireframes", 
+        "Interactive Prototypes",
+        "Final UI Design",
+        "Responsive Design",
+        "User Experience Optimization"
       ],
       relatedIcons: [
-        { icon: Monitor, label: "Desktop Design" },
-        { icon: Code, label: "Development" },
+        { icon: Monitor, label: "Web Design" },
         { icon: Figma, label: "Design Tools" },
-        { icon: Smartphone, label: "Mobile First" },
-        { icon: Globe, label: "Web Standards" },
-        { icon: Layers, label: "UI Components" }
+        { icon: Users, label: "User Research" },
+        { icon: Layout, label: "Wireframing" },
+        { icon: Eye, label: "Visual Design" },
+        { icon: Smartphone, label: "Responsive" }
       ],
       images: [
         "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
@@ -41,79 +44,57 @@ const Services = () => {
       ]
     },
     {
-      title: "Wireframes",
-      description: "Strategic blueprints that map out your digital product's structure and functionality.",
+      title: "Wireframes (Low-Fi & High-Fi)",
+      description: "Strategic blueprints in two levels - basic structure layouts (Low-Fi) and detailed design wireframes (High-Fi).",
       detailedDescription: [
-        "Professional wireframes that serve as the architectural foundation for your digital products, ensuring optimal user flow and functionality.",
-        "Our wireframing process involves detailed user journey mapping and information architecture to create intuitive, user-centered designs."
+        "Low-Fidelity (Low-Fi) Wireframes: Basic structural layouts focusing on content placement and navigation flow without visual styling.",
+        "High-Fidelity (High-Fi) Wireframes: Detailed wireframes with specific spacing, typography, and interactive elements clearly defined."
       ],
       features: [
+        "Low-Fi Wireframes (Structure Focus)",
+        "High-Fi Wireframes (Detail Focus)",
         "User Flow Mapping",
         "Information Architecture",
-        "Interactive Wireframes",
         "Content Strategy",
-        "Navigation Design"
+        "Navigation Design",
+        "Interactive Elements Planning",
+        "Mobile & Desktop Layouts"
       ],
       relatedIcons: [
         { icon: Layout, label: "Structure Design" },
         { icon: Layers, label: "Information Architecture" },
+        { icon: Target, label: "User Goals" },
         { icon: MousePointer, label: "User Interaction" },
         { icon: Globe, label: "Web Framework" },
-        { icon: Smartphone, label: "Mobile Layout" },
-        { icon: Target, label: "User Goals" }
+        { icon: Smartphone, label: "Mobile Layout" }
       ],
       images: [
         "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=400&q=80",
-        "/src/assets/wireframe 1.JPG",
-        "/src/assets/wireframe 2.JPG"
+        "https://images.unsplash.com/photo-1607706189992-eae578626c86?auto=format&fit=crop&w=400&q=80", 
+        "https://images.unsplash.com/photo-1559251606-c623743a6d76?auto=format&fit=crop&w=400&q=80"
       ]
     },
     {
-      title: "Hi-Fi (High Fidelity) Design",
-      description: "Pixel-perfect, detailed designs that bring your vision to life with stunning visual accuracy.",
+      title: "Interactive Prototypes",
+      description: "Clickable, interactive demos that simulate the actual user experience before development begins.",
       detailedDescription: [
-        "High-fidelity designs that showcase the final look and feel of your product with precise details, colors, and typography.",
-        "Our Hi-Fi designs include comprehensive style guides and detailed specifications for seamless development handoff."
+        "Interactive prototypes are clickable versions of your wireframes that simulate how users will actually interact with your website or app.",
+        "These prototypes allow you to test user flows, validate design decisions, and gather feedback before development begins."
       ],
       features: [
-        "Pixel-Perfect Designs",
-        "Visual Style Guides",
-        "Typography Systems",
-        "Color Palettes",
-        "Component Libraries"
-      ],
-      relatedIcons: [
-        { icon: Figma, label: "Design Tools" },
-        { icon: Palette, label: "Color Systems" },
-        { icon: Eye, label: "Visual Details" },
-        { icon: Layers, label: "Design Systems" },
-        { icon: Brush, label: "Creative Design" },
-        { icon: Settings, label: "Design Specs" }
-      ],
-      images: [
-        "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&w=400&q=80"
-      ]
-    },
-    {
-      title: "Web and App Prototypes",
-      description: "Interactive prototypes that demonstrate functionality and user experience before development.",
-      detailedDescription: [
-        "Interactive prototypes that allow you to test and validate your product concepts before investing in full development.",
-        "Our prototyping process includes user testing and iteration to ensure the final product meets user needs and business objectives."
-      ],
-      features: [
-        "Interactive Prototypes",
-        "User Testing",
-        "Animation & Transitions",
-        "Click-through Demos",
+        "Clickable Interactive Demos",
+        "User Flow Testing",
+        "Realistic User Experience",
+        "Mobile & Desktop Prototypes",
+        "Transition Animations",
+        "User Testing Ready",
+        "Stakeholder Presentations",
         "Feedback Integration"
       ],
       relatedIcons: [
         { icon: Play, label: "Interactive Demo" },
         { icon: MousePointer, label: "User Interaction" },
-        { icon: Zap, label: "Quick Prototyping" },
+        { icon: Zap, label: "Quick Testing" },
         { icon: Smartphone, label: "Mobile Prototypes" },
         { icon: Monitor, label: "Web Prototypes" },
         { icon: Users, label: "User Testing" }
@@ -125,18 +106,21 @@ const Services = () => {
       ]
     },
     {
-      title: "WordPress Sites",
-      description: "Custom WordPress websites that are easy to manage and built for performance.",
+      title: "WordPress Web Design & Development",
+      description: "Custom WordPress websites that combine beautiful design with powerful, easy-to-manage functionality.",
       detailedDescription: [
-        "Professional WordPress websites that combine beautiful design with powerful functionality and easy content management.",
-        "Our WordPress development includes custom themes, plugin integration, and optimization for speed, security, and SEO."
+        "Professional WordPress websites that perfectly blend stunning visual design with robust functionality and user-friendly content management.",
+        "Our WordPress solutions include custom theme development, plugin integration, and comprehensive optimization for speed, security, and SEO."
       ],
       features: [
         "Custom WordPress Themes",
-        "Plugin Integration",
+        "Responsive Design",
         "SEO Optimization",
         "Performance Optimization",
-        "Content Management Training"
+        "Security Setup",
+        "Plugin Integration",
+        "Content Management Training",
+        "Ongoing Support"
       ],
       relatedIcons: [
         { icon: Globe, label: "WordPress CMS" },
@@ -147,84 +131,62 @@ const Services = () => {
         { icon: Users, label: "User Management" }
       ],
       images: [
-        "https://uanvi.com/wp-content/uploads/2022/04/WordPress.jpg",
         "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80"
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=400&q=80"
       ]
     },
     {
-      title: "Logo Design", 
-      description: "Memorable brand identities that make your business stand out.",
+      title: "Logo & Banner Design", 
+      description: "Memorable brand identities and eye-catching banners that make your business stand out across all platforms.",
       detailedDescription: [
-        "Your logo is the face of your brand, and we craft memorable designs that capture your company's essence and values.",
-        "Our logo design process involves deep research into your industry, competitors, and target market to create unique solutions."
+        "Your logo is the cornerstone of your brand identity. We create memorable, versatile logos that capture your company's essence and work across all mediums.",
+        "Our banner designs include social media graphics, website banners, and marketing materials that maintain brand consistency."
       ],
       features: [
         "Brand Identity Development",
-        "Logo Conceptualization",
-        "Typography Selection", 
-        "Color Palette Creation",
-        "Brand Guidelines"
+        "Logo Conceptualization & Design",
+        "Social Media Banners",
+        "Website Headers & Banners", 
+        "Marketing Material Design",
+        "Typography & Color Systems",
+        "Brand Guidelines Creation",
+        "Multiple Format Delivery"
       ],
       relatedIcons: [
-        { icon: Palette, label: "Color Design" },
+        { icon: Palette, label: "Brand Colors" },
         { icon: Brush, label: "Creative Design" },
         { icon: Eye, label: "Visual Identity" },
-        { icon: Target, label: "Brand Focus" },
-        { icon: Rocket, label: "Brand Launch" },
-        { icon: Users, label: "Brand Strategy" }
+        { icon: Share2, label: "Social Media" },
+        { icon: Image, label: "Banner Design" },
+        { icon: Target, label: "Brand Strategy" }
       ],
       images: [
         "/src/assets/logo1.JPG",
         "/src/assets/logo2.JPG",
-        "/src/assets/logo3.JPG"
-      ]
-    },
-    {
-      title: "Social Media Banners",
-      description: "Eye-catching social media graphics that boost engagement and brand awareness.",
-      detailedDescription: [
-        "Professional social media banners and graphics designed to maximize engagement across all major platforms.",
-        "Our social media designs are optimized for each platform's specifications and designed to capture attention in crowded feeds."
-      ],
-      features: [
-        "Platform-Specific Sizing",
-        "Brand-Consistent Designs",
-        "Engagement-Focused Graphics",
-        "Template Creation",
-        "Multi-Platform Optimization"
-      ],
-      relatedIcons: [
-        { icon: Share2, label: "Social Sharing" },
-        { icon: Image, label: "Visual Content" },
-        { icon: Users, label: "Social Engagement" },
-        { icon: Target, label: "Audience Targeting" },
-        { icon: Brush, label: "Creative Design" },
-        { icon: Zap, label: "Quick Delivery" }
-      ],
-      images: [
-        "/src/assets/poster3.JPG",
-        "/src/assets/poster2.JPG",
-        "/src/assets/poster.JPG"
+        "/src/assets/poster3.JPG"
       ]
     },
     {
       title: "Product Mockups",
-      description: "Professional mockups that showcase your products in the best light.",
+      description: "Professional product presentations that showcase your designs in realistic, market-ready contexts.",
       detailedDescription: [
-        "Professional product mockups that bring your designs to life and showcase them in realistic, engaging contexts.",
-        "We create high-quality presentations that help you visualize your products before production and impress potential clients."
+        "High-quality product mockups that bring your designs to life and present them in professional, realistic settings.",
+        "We create stunning visual presentations that help you showcase products to clients, investors, or customers before production."
       ],
       features: [
         "Realistic Product Presentations",
         "Multiple Angle Views",
         "Professional Photography Style",
         "Brand Integration",
-        "Marketing Ready Assets"
+        "Marketing Ready Assets",
+        "High-Resolution Output",
+        "Various Context Settings",
+        "Client Presentation Ready"
       ],
       relatedIcons: [
         { icon: Package, label: "Product Design" },
-        { icon: Camera, label: "Photography" },
+        { icon: Camera, label: "Photography Style" },
         { icon: Image, label: "Visual Assets" },
         { icon: Presentation, label: "Presentations" },
         { icon: FileImage, label: "Mockup Files" },
@@ -233,57 +195,32 @@ const Services = () => {
       images: [
         "/src/assets/product mu.JPG",
         "/src/assets/product mu2.JPG",
-        "/src/assets/product mu3.JPG", 
+        "/src/assets/product mu3.JPG"
       ]
     },
     {
-      title: "Advertisement Mockups",
-      description: "Compelling advertisement designs that drive conversions and build brand recognition.",
+      title: "Brand & Visual Design",
+      description: "Comprehensive visual brand strategies that create consistent, memorable experiences across all touchpoints.",
       detailedDescription: [
-        "Professional advertisement mockups for print and digital campaigns that capture attention and drive action.",
-        "Our advertisement designs combine persuasive copywriting with striking visuals to maximize campaign effectiveness and ROI."
+        "Complete visual brand identity systems that tell your brand story and create lasting impressions across all customer interactions.",
+        "We develop comprehensive brand guidelines, marketing materials, and digital assets that ensure consistency across all platforms."
       ],
       features: [
-        "Print Advertisement Design",
-        "Digital Ad Campaigns",
-        "Billboard & Poster Design",
-        "Social Media Ads",
-        "Campaign Strategy"
-      ],
-      relatedIcons: [
-        { icon: Megaphone, label: "Advertising" },
-        { icon: Target, label: "Campaign Targeting" },
-        { icon: Eye, label: "Visual Impact" },
-        { icon: Printer, label: "Print Ads" },
-        { icon: Monitor, label: "Digital Ads" },
-        { icon: ShoppingCart, label: "Conversion Focus" }
-      ],
-      images: [
-        "/src/assets/mockup1.JPG",
-        "/src/assets/mockup2.JPG",
-        "/src/assets/mockup1.JPG"
-      ]
-    },
-    {
-      title: "Brand and Visual Design",
-      description: "Comprehensive visual strategies that tell your brand story.",
-      detailedDescription: [
-        "Complete visual brand strategies that create consistent, memorable experiences across all customer touchpoints.",
-        "We develop comprehensive brand systems including visual guidelines, marketing materials, and digital assets."
-      ],
-      features: [
-        "Visual Brand Strategy",
-        "Marketing Materials",
-        "Social Media Graphics",
-        "Print Design",
-        "Digital Assets"
+        "Complete Visual Brand Strategy",
+        "Brand Guidelines & Standards",
+        "Marketing Material Design",
+        "Social Media Visual Systems",
+        "Print Design Solutions",
+        "Digital Asset Creation",
+        "Brand Application Design",
+        "Visual Consistency Management"
       ],
       relatedIcons: [
         { icon: Brush, label: "Creative Design" },
         { icon: Printer, label: "Print Design" },
         { icon: Globe, label: "Digital Assets" },
         { icon: Users, label: "Social Media" },
-        { icon: Target, label: "Marketing" },
+        { icon: Target, label: "Brand Strategy" },
         { icon: Eye, label: "Brand Vision" }
       ],
       images: [
@@ -323,9 +260,9 @@ const Services = () => {
         {serviceCategories.map((category, categoryIndex) => (
           <section 
             key={categoryIndex}
-            className={`py-24 ${categoryIndex % 2 === 0 ? 'section-gray' : 'bg-background'}`}
+            className={`py-20 ${categoryIndex % 2 === 0 ? 'bg-gray-50/50' : 'bg-background'} border-b border-gray-100`}
           >
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto px-6 max-w-7xl">
               {/* Section Header */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -334,46 +271,42 @@ const Services = () => {
                 viewport={{ once: true }}
                 className="text-center mb-16"
               >
-                <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
                   {category.title}
                 </h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                   {category.description}
                 </p>
               </motion.div>
 
-              <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
                 {/* Content Section */}
                 <motion.div 
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
-                  className={`space-y-8 ${categoryIndex % 2 === 1 ? 'lg:order-2' : ''}`}
+                  className={`space-y-6 ${categoryIndex % 2 === 1 ? 'lg:order-2' : ''}`}
                 >
-                  {/* 4-line Detailed Description */}
+                  {/* Detailed Description */}
                   <div className="space-y-4">
                     {category.detailedDescription.map((line, lineIndex) => (
-                      <p key={lineIndex} className="text-muted-foreground leading-relaxed">
+                      <p key={lineIndex} className="text-muted-foreground leading-relaxed text-lg">
                         {line}
                       </p>
                     ))}
                   </div>
 
                   {/* Related Icons */}
-                  <div className="py-6">
-                    <div className="flex flex-wrap gap-4">
+                  <div className="py-4">
+                    <div className="flex flex-wrap gap-3">
                       {category.relatedIcons.map((iconItem, iconIndex) => {
                         const IconComponent = iconItem.icon;
                         return (
                           <div key={iconIndex} className="relative group">
-                            <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300 cursor-pointer border border-primary/20 group-hover:border-primary/40">
-                              <IconComponent className="w-7 h-7 text-primary" />
-                            </div>
-                            {/* Tooltip on hover */}
-                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10 shadow-lg">
-                              {iconItem.label}
-                              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+                            <div className="flex items-center gap-2 px-3 py-2 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors border border-primary/20">
+                              <IconComponent className="h-4 w-4 text-primary" />
+                              <span className="text-sm text-foreground font-medium">{iconItem.label}</span>
                             </div>
                           </div>
                         );
@@ -382,28 +315,30 @@ const Services = () => {
                   </div>
                   
                   {/* Features List */}
-                  <div className="space-y-4">
-                    <h4 className="text-lg font-semibold text-foreground mb-4">What's Included</h4>
-                    {category.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center gap-4">
-                        <div className="w-6 h-6 rounded-full bg-gradient-to-r from-primary to-primary/70 flex items-center justify-center flex-shrink-0">
-                          <Check className="w-4 h-4 text-white" />
+                  <div className="space-y-3">
+                    <h4 className="text-xl font-semibold text-foreground mb-4">What's Included</h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {category.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center gap-3">
+                          <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                            <Check className="w-3 h-3 text-white" />
+                          </div>
+                          <span className="text-muted-foreground text-sm font-medium">{feature}</span>
                         </div>
-                        <span className="text-foreground font-medium text-lg">{feature}</span>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                   
                   <Button 
                     size="lg" 
-                    className="gradient-primary text-white shadow-button hover:shadow-glow transition-spring group mt-8"
+                    className="gradient-primary text-white shadow-button hover:shadow-glow transition-spring group mt-6"
                   >
                     Get Started
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </motion.div>
 
-                {/* Images Section - Improved Layout */}
+                {/* Images Section */}
                 <motion.div 
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -411,7 +346,7 @@ const Services = () => {
                   viewport={{ once: true }}
                   className={`${categoryIndex % 2 === 1 ? 'lg:order-1' : ''}`}
                 >
-                  <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
+                  <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
                     {/* First image - spans full width */}
                     <div className="col-span-2">
                       <img 
