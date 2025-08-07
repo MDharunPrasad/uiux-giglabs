@@ -16,11 +16,11 @@ const TrustedPartners = () => {
         >
           <div>
             <GradientHeading variant="secondary" size="sm" className="mb-4">
-              The best are already here
-            </GradientHeading>
-            <GradientHeading size="xl" className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
               Trusted by Leading Brands
             </GradientHeading>
+            {/* <GradientHeading size="xl" className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+              Trusted by Leading Brands
+            </GradientHeading> */}
           </div>
           
           <div className="flex justify-center">
