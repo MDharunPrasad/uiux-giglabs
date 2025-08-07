@@ -44,22 +44,27 @@ const About = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative container mx-auto px-6 py-20 lg:py-28">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="relative container mx-auto px-6 py-20 lg:py-28 overflow-hidden">
+          {/* Background Elements */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50/50 -z-10" />
+          <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-400/10 to-blue-600/5 rounded-full blur-3xl -z-10" />
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-br from-blue-500/5 to-blue-700/10 rounded-full blur-3xl -z-10" />
+          
+          <div className="max-w-4xl mx-auto text-center relative">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-                <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium mb-6 shadow-soft">
+                <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse-slow" />
                 About GIGLABS
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
                 Digital Transformation &{" "}
-                <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
                   AI Solutions
                 </span>
               </h1>
@@ -77,14 +82,21 @@ const About = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
                 {stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
-                      {stat.number}
+                  <motion.div 
+                    key={index} 
+                    className="text-center group"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                  >
+                    <div className="relative bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-soft border border-blue-100/50 group-hover:shadow-blue transition-all duration-300">
+                      <div className="text-3xl lg:text-4xl font-bold text-blue-600 mb-2">
+                        {stat.number}
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        {stat.label}
+                      </div>
                     </div>
-                    <div className="text-sm text-muted-foreground">
-                      {stat.label}
-                    </div>
-                  </div>
+                  </motion.div>
                 ))}
               </motion.div>
             </motion.div>
@@ -92,7 +104,7 @@ const About = () => {
         </section>
 
         {/* Services Highlight */}
-        <section className="py-16 border-y border-gray-100">
+        <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50 border-y border-blue-100">
           <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -111,10 +123,10 @@ const About = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {[
-                { icon: Zap, title: "Digital Integration", desc: "Streamline processes with automation" },
-                { icon: Target, title: "Data & AI", desc: "Unlock insights with intelligent solutions" },
-                { icon: Globe, title: "DevOps", desc: "Accelerate delivery and collaboration" },
-                { icon: Award, title: "Quality Engineering", desc: "Ensure excellence throughout development" }
+                { icon: Zap, title: "Digital Integration", desc: "Streamline processes with automation", color: "blue" },
+                { icon: Target, title: "Data & AI", desc: "Unlock insights with intelligent solutions", color: "indigo" },
+                { icon: Globe, title: "DevOps", desc: "Accelerate delivery and collaboration", color: "sky" },
+                { icon: Award, title: "Quality Engineering", desc: "Ensure excellence throughout development", color: "blue" }
               ].map((service, index) => {
                 const IconComponent = service.icon;
                 return (
@@ -125,12 +137,15 @@ const About = () => {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     className="text-center group"
+                    whileHover={{ y: -5 }}
                   >
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                      <IconComponent className="w-6 h-6 text-primary" />
+                    <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-soft border border-blue-100/50 group-hover:shadow-blue transition-all duration-300 h-full">
+                      <div className={`w-12 h-12 bg-${service.color}-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-${service.color}-200 transition-colors`}>
+                        <IconComponent className={`w-6 h-6 text-${service.color}-600`} />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">{service.title}</h3>
+                      <p className="text-sm text-muted-foreground">{service.desc}</p>
                     </div>
-                    <h3 className="font-semibold text-foreground mb-2">{service.title}</h3>
-                    <p className="text-sm text-muted-foreground">{service.desc}</p>
                   </motion.div>
                 );
               })}
@@ -139,8 +154,16 @@ const About = () => {
         </section>
 
         {/* Mission Section */}
-        <section className="bg-gray-50/50 py-20">
-          <div className="container mx-auto px-6">
+        <section className="bg-white py-20 relative overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `radial-gradient(circle at 20px 20px, hsl(217, 91%, 60%) 1px, transparent 0)`,
+              backgroundSize: '40px 40px'
+            }} />
+          </div>
+          
+          <div className="container mx-auto px-6 relative">
             <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -149,13 +172,16 @@ const About = () => {
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">
                   <Target className="w-4 h-4" />
                   Our Mission
                 </div>
                 
                 <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-                  Accelerating Innovation with Integrated Solutions
+                  Accelerating Innovation with{" "}
+                  <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                    Integrated Solutions
+                  </span>
                 </h2>
                 
                 <div className="space-y-4">
@@ -165,19 +191,19 @@ const About = () => {
                   
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0" />
+                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0" />
                       <p className="text-muted-foreground">
                         <strong className="text-foreground">Harnessing Technology:</strong> We solve complex challenges, drive efficiency, and enhance user experiences for our clients.
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0" />
+                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0" />
                       <p className="text-muted-foreground">
                         <strong className="text-foreground">Quality Focus:</strong> We strive to be the premier choice for organizations seeking top-tier software development expertise.
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0" />
+                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-3 flex-shrink-0" />
                       <p className="text-muted-foreground">
                         <strong className="text-foreground">Exceeding Expectations:</strong> We deliver cutting-edge solutions that fuel growth in a rapidly evolving digital landscape.
                       </p>
@@ -197,27 +223,31 @@ const About = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=500&q=80" 
                     alt="Digital transformation workspace"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                   />
                 </div>
-                <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl">
+                <motion.div 
+                  className="absolute -bottom-6 -right-6 bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-blue-100"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                >
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                      <Globe className="w-6 h-6 text-primary" />
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                      <Globe className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
                       <div className="font-bold text-foreground">Global Reach</div>
                       <div className="text-sm text-muted-foreground">Singapore & India</div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </motion.div>
             </div>
           </div>
         </section>
 
         {/* Core Values */}
-        <section className="py-20">
+        <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
           <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -227,7 +257,10 @@ const About = () => {
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                Our Core Values
+                Our{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                  Core Values
+                </span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Giglabs experts evaluate new technologies constantly in ongoing R&D efforts that make sure 
@@ -246,17 +279,23 @@ const About = () => {
                     transition={{ duration: 0.8, delay: index * 0.2 }}
                     viewport={{ once: true }}
                     className="group"
+                    whileHover={{ y: -10 }}
                   >
-                    <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 h-full">
-                      <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                        <IconComponent className="w-8 h-8 text-primary" />
+                    <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-soft hover:shadow-blue transition-all duration-300 border border-blue-100/50 hover:border-blue-200 h-full relative overflow-hidden">
+                      {/* Background Gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      
+                      <div className="relative">
+                        <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-200 transition-colors group-hover:scale-110 transform duration-300">
+                          <IconComponent className="w-8 h-8 text-blue-600" />
+                        </div>
+                        <h3 className="text-xl font-bold text-foreground mb-4">
+                          {value.title}
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed">
+                          {value.description}
+                        </p>
                       </div>
-                      <h3 className="text-xl font-bold text-foreground mb-4">
-                        {value.title}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {value.description}
-                      </p>
                     </div>
                   </motion.div>
                 );
@@ -266,8 +305,20 @@ const About = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-primary py-20">
-          <div className="container mx-auto px-6">
+        <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 py-20 relative overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `radial-gradient(circle at 50px 50px, white 2px, transparent 0)`,
+              backgroundSize: '100px 100px'
+            }} />
+          </div>
+          
+          {/* Floating Elements */}
+          <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-float" />
+          <div className="absolute bottom-20 right-10 w-48 h-48 bg-white/5 rounded-full blur-3xl" style={{ animationDelay: '2s' }} />
+          
+          <div className="container mx-auto px-6 relative">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -276,14 +327,17 @@ const About = () => {
               className="text-center max-w-4xl mx-auto"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Ready to unlock your business's full potential?
+                Ready to unlock your{" "}
+                <span className="text-blue-200">
+                  business's full potential?
+                </span>
               </h2>
-              <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
                 Take the first step towards transformative growth today. Contact us now to schedule 
                 a consultation and discover how our tailored solutions can propel your business towards its goals.
               </p>
               <motion.button
-                className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-300 inline-flex items-center gap-2 text-lg"
+                className="bg-white text-blue-700 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 inline-flex items-center gap-2 text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => navigate('/contact')}
