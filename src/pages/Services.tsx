@@ -38,9 +38,9 @@ const Services = () => {
         { icon: Smartphone, label: "Responsive" }
       ],
       images: [
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80"
+        "/src/assets/uiux3.png",
+        "/src/assets/uiux2.jpeg",
+        "/src/assets/uiux.png"
       ]
     },
     {
@@ -70,8 +70,8 @@ const Services = () => {
       ],
       images: [
         "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1607706189992-eae578626c86?auto=format&fit=crop&w=400&q=80", 
-        "https://images.unsplash.com/photo-1559251606-c623743a6d76?auto=format&fit=crop&w=400&q=80"
+        "/src/assets/wireframe4.png",
+        "/src/assets/wireframe5.png"
       ]
     },
     {
@@ -131,9 +131,9 @@ const Services = () => {
         { icon: Users, label: "User Management" }
       ],
       images: [
-        "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=400&q=80"
+        "https://www.seoclerk.com/pics/000/859/348/2152dcfe4d6b34200c9b7b1c51dbd0c4.png",
+        "https://elementor.com/blog/wp-content/uploads/2023/05/How-to-create-a-WordPress-website.png",
+        "/src/assets/wordpress3.png"
       ]
     },
     {
@@ -224,9 +224,9 @@ const Services = () => {
         { icon: Eye, label: "Brand Vision" }
       ],
       images: [
-        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=400&q=80",
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80"
+        "https://cdn.logojoy.com/wp-content/uploads/20190606100723/cosmic_coffee_scene-1024x576.jpg",
+        "/src/assets/mockup1.JPG",
+        "/src/assets/mockup2.JPG"
       ]
     }
   ];
