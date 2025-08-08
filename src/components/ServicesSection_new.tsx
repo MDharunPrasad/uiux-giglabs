@@ -89,7 +89,7 @@ const ServicesSection = () => {
             const IconComponent = service.icon;
             return (
               <div key={index} className="group">
-                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 p-8 h-full border border-gray-100 hover:border-blue-200">
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-blue transition-all duration-500 p-8 h-full border border-gray-100 hover:border-blue-200">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="gradient-primary p-4 rounded-xl shadow-lg">
                       <IconComponent className="w-8 h-8 text-white" />

@@ -30,9 +30,13 @@ const Navigation = () => {
       <div className="container mx-auto px-4 md:px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+          <Link 
+            to="/" 
+            onClick={handleNavigation}
+            className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200 cursor-pointer"
+          >
             GIGLABS
-          </div>
+          </Link>
 
           {/* Desktop Navigation Menu */}
           <div className="hidden lg:flex items-center space-x-8">
