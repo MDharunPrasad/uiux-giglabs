@@ -3,7 +3,12 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Camera, Building2, Users } from "lucide-react";
+
+// Import office photos
+import office1 from "@/assets/photos/image 1.jpg";
+import office2 from "@/assets/photos/image 2.jpg";
+import office3 from "@/assets/photos/image 3.jpg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -761,6 +766,75 @@ const Contact = () => {
               </div>
             </motion.div>
           </motion.div>
+        </section>
+
+        {/* Office Gallery Section */}
+        <section className="py-12 bg-gradient-to-br from-gray-50 to-white">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              {/* Office Photos Grid - Portrait Style */}
+              <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                {/* Office Image 1 */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="group relative overflow-hidden rounded-2xl shadow-lg bg-white p-1"
+                >
+                  <div className="relative overflow-hidden rounded-xl">
+                    <img
+                      src={office1}
+                      alt="GigLabs Modern Office Reception"
+                      className="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </motion.div>
+
+                {/* Office Image 2 */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="group relative overflow-hidden rounded-2xl shadow-lg bg-white p-1"
+                >
+                  <div className="relative overflow-hidden rounded-xl">
+                    <img
+                      src={office2}
+                      alt="GigLabs Team Workspace"
+                      className="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </motion.div>
+
+                {/* Office Image 3 */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="group relative overflow-hidden rounded-2xl shadow-lg bg-white p-1"
+                >
+                  <div className="relative overflow-hidden rounded-xl">
+                    <img
+                      src={office3}
+                      alt="GigLabs Recreation Area"
+                      className="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
         </section>
       </main>
 
