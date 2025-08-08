@@ -1,5 +1,11 @@
 import React, { type SVGProps } from "react";
 
+// Import trusted partner logos
+import GigLabsLogo from "@/assets/trusted partners/giglabs.png";
+import ResourcefullyLogoW from "@/assets/trusted partners/resourcefully logo w.png";
+import ResourcefullyLogo from "@/assets/trusted partners/resourcefully logo.png";
+import YutanixLogo from "@/assets/trusted partners/yutanix.png";
+
 function AppleIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -234,14 +240,62 @@ function OpenAIIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+// Image-based trusted partner logo components
+function GigLabsIcon(props: React.ImgHTMLAttributes<HTMLImageElement>) {
+  return (
+    <img
+      src={GigLabsLogo}
+      alt="GigLabs"
+      className="h-12 w-auto object-contain"
+      {...props}
+    />
+  );
+}
+
+function ResourcefullyWhiteIcon(props: React.ImgHTMLAttributes<HTMLImageElement>) {
+  return (
+    <img
+      src={ResourcefullyLogoW}
+      alt="Resourcefully"
+      className="h-12 w-auto object-contain"
+      {...props}
+    />
+  );
+}
+
+function ResourcefullyIcon(props: React.ImgHTMLAttributes<HTMLImageElement>) {
+  return (
+    <img
+      src={ResourcefullyLogo}
+      alt="Resourcefully"
+      className="h-12 w-auto object-contain"
+      {...props}
+    />
+  );
+}
+
+function YutanixIcon(props: React.ImgHTMLAttributes<HTMLImageElement>) {
+  return (
+    <img
+      src={YutanixLogo}
+      alt="Yutanix"
+      className="h-12 w-auto object-contain"
+      {...props}
+    />
+  );
+}
+
 // Array of logos with their components
 export const allLogos = [
-  { name: "Apple", id: 1, img: AppleIcon },
-  { name: "Supabase", id: 2, img: SupabaseIcon },
+  // { name: "Apple", id: 1, img: AppleIcon },
+  // { name: "Supabase", id: 2, img: SupabaseIcon },
   { name: "Vercel", id: 3, img: VercelIcon },
-  { name: "Next.js", id: 4, img: NextjsIcon },
+  // { name: "Next.js", id: 4, img: NextjsIcon },
   { name: "TypeScript", id: 5, img: TypeScriptIcon },
   { name: "Stripe", id: 6, img: StripeIcon },
   { name: "Tailwind", id: 7, img: TailwindCSSIcon },
   { name: "OpenAI", id: 8, img: OpenAIIcon },
+  { name: "GigLabs", id: 9, img: GigLabsIcon },
+  { name: "Resourcefully", id: 10, img: ResourcefullyIcon },
+  { name: "Yutanix", id: 11, img: YutanixIcon },
 ];
