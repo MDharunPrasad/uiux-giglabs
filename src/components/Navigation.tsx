@@ -67,7 +67,7 @@ const Navigation = () => {
             {/* WhatsApp Button */}
             <Button 
               onClick={handleWhatsAppClick}
-              className="gradient-primary text-white px-3 md:px-6 py-2 md:py-3 rounded flex items-center gap-2 md:gap-3 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base"
+              className="bg-[#25D366] hover:bg-[#128C7E] text-white px-3 md:px-6 py-2 md:py-3 rounded-full flex items-center gap-2 md:gap-3 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base"
               title="Chat on WhatsApp"
             >
               <svg className="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
