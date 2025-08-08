@@ -45,9 +45,9 @@ const Services = () => {
         { icon: Smartphone, label: "Responsive" }
       ],
       images: [
-        "/src/assets/uiux3.png",
-        "/src/assets/uiux2.jpeg",
-        "/src/assets/uiux.png"
+        "uiux3.png",
+        "uiux2.jpeg",
+        "uiux.png"
       ]
     },
     {
@@ -77,8 +77,8 @@ const Services = () => {
       ],
       images: [
         "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=400&q=80",
-        "/src/assets/wireframe4.png",
-        "/src/assets/wireframe5.png"
+        "wireframe4.png",
+        "wireframe5.png"
       ]
     },
     {
@@ -140,7 +140,7 @@ const Services = () => {
       images: [
         "https://www.seoclerk.com/pics/000/859/348/2152dcfe4d6b34200c9b7b1c51dbd0c4.png",
         "https://elementor.com/blog/wp-content/uploads/2023/05/How-to-create-a-WordPress-website.png",
-        "/src/assets/wordpress3.png"
+        "wordpress3.png"
       ]
     },
     {
@@ -169,9 +169,9 @@ const Services = () => {
         { icon: Target, label: "Brand Strategy" }
       ],
       images: [
-        "/src/assets/logo1.JPG",
-        "/src/assets/logo2.JPG",
-        "/src/assets/poster3.JPG"
+        "logo1.JPG",
+        "logo2.JPG",
+        "poster3.JPG"
       ]
     },
     {
@@ -200,9 +200,9 @@ const Services = () => {
         { icon: Rocket, label: "Product Launch" }
       ],
       images: [
-        "/src/assets/product mu.JPG",
-        "/src/assets/product mu2.JPG",
-        "/src/assets/product mu3.JPG"
+        "product mu.JPG",
+        "/product mu2.JPG",
+        "product mu3.JPG"
       ]
     },
     {
@@ -232,8 +232,8 @@ const Services = () => {
       ],
       images: [
         "https://cdn.logojoy.com/wp-content/uploads/20190606100723/cosmic_coffee_scene-1024x576.jpg",
-        "/src/assets/mockup1.JPG",
-        "/src/assets/mockup2.JPG"
+        "mockup1.JPG",
+        "mockup2.JPG"
       ]
     }
   ];
