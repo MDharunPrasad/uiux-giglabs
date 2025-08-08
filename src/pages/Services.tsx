@@ -4,12 +4,19 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Check, Monitor, Code, Figma, Smartphone, Globe, Layers, Palette, Brush, Camera, Eye, Rocket, Target, Package, Image, Printer, FileImage, Presentation, Users, Layout, Zap, MousePointer, Play, Settings, Share2, Megaphone, ShoppingCart } from "lucide-react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
+
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
+
+  const handleGetStarted = () => {
+    navigate('/contact#start-your-project');
+  };
 
   const serviceCategories = [
     {
@@ -331,6 +338,7 @@ const Services = () => {
                   
                   <Button 
                     size="lg" 
+                    onClick={handleGetStarted}
                     className="gradient-primary text-white shadow-button hover:shadow-glow transition-spring group mt-8"
                   >
                     Get Started
