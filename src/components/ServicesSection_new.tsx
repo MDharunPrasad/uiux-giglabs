@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 const ServicesSection = () => {
   const navigate = useNavigate();
-  
+
   const handleLearnMore = () => {
     console.log('Learn More clicked - navigating to services');
     navigate('/services', { replace: false });
@@ -23,7 +23,7 @@ const ServicesSection = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   };
-  
+
   const services = [
     {
       category: "Web Design",
@@ -31,7 +31,7 @@ const ServicesSection = () => {
       definition: "Crafting digital experiences that engage and convert users through intuitive design and seamless user interface development.",
       features: [
         "Hand Drawn Wireframes",
-        "HiFi Designs", 
+        "HiFi Designs",
         "Prototypes",
         "WordPress Sites",
         "UI/UX Designs"
@@ -73,7 +73,7 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-gray-800 mb-6">
-            Professional Design & 
+            Professional Design &
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70">
               Development Services
@@ -96,7 +96,7 @@ const ServicesSection = () => {
                     </div>
                     <h3 className="text-3xl font-bold text-gray-800">{service.category}</h3>
                   </div>
-                  
+
                   {/* Animated SVG Section */}
                   <div className="mb-6 flex justify-center">
                     {service.category === "Web Design" ? (
@@ -104,29 +104,29 @@ const ServicesSection = () => {
                         {/* Animated Website Mockup */}
                         <svg className="w-full h-full" viewBox="0 0 240 120" fill="none">
                           {/* Browser Window */}
-                          <rect x="10" y="15" width="220" height="90" rx="8" fill="white" className="drop-shadow-md"/>
-                          <rect x="10" y="15" width="220" height="20" rx="8" fill="#f3f4f6"/>
-                          <circle cx="25" cy="25" r="3" fill="#ef4444" className="animate-pulse"/>
-                          <circle cx="35" cy="25" r="3" fill="#f59e0b" className="animate-pulse" style={{animationDelay: '0.5s'}}/>
-                          <circle cx="45" cy="25" r="3" fill="#10b981" className="animate-pulse" style={{animationDelay: '1s'}}/>
-                          
+                          <rect x="10" y="15" width="220" height="90" rx="8" fill="white" className="drop-shadow-md" />
+                          <rect x="10" y="15" width="220" height="20" rx="8" fill="#f3f4f6" />
+                          <circle cx="25" cy="25" r="3" fill="#ef4444" className="animate-pulse" />
+                          <circle cx="35" cy="25" r="3" fill="#f59e0b" className="animate-pulse" style={{ animationDelay: '0.5s' }} />
+                          <circle cx="45" cy="25" r="3" fill="#10b981" className="animate-pulse" style={{ animationDelay: '1s' }} />
+
                           {/* Content Lines with Animation */}
-                          <rect x="25" y="45" width="190" height="4" rx="2" fill="#3b82f6" className="animate-pulse"/>
-                          <rect x="25" y="55" width="150" height="3" rx="1.5" fill="#6b7280" className="animate-pulse" style={{animationDelay: '0.3s'}}/>
-                          <rect x="25" y="63" width="170" height="3" rx="1.5" fill="#6b7280" className="animate-pulse" style={{animationDelay: '0.6s'}}/>
-                          
+                          <rect x="25" y="45" width="190" height="4" rx="2" fill="#3b82f6" className="animate-pulse" />
+                          <rect x="25" y="55" width="150" height="3" rx="1.5" fill="#6b7280" className="animate-pulse" style={{ animationDelay: '0.3s' }} />
+                          <rect x="25" y="63" width="170" height="3" rx="1.5" fill="#6b7280" className="animate-pulse" style={{ animationDelay: '0.6s' }} />
+
                           {/* Mobile Device */}
-                          <rect x="190" y="40" width="35" height="60" rx="6" fill="white" className="drop-shadow-md animate-bounce" style={{animationDuration: '3s'}}/>
-                          <rect x="195" y="45" width="25" height="2" rx="1" fill="#3b82f6"/>
-                          <rect x="195" y="50" width="20" height="1.5" rx="0.75" fill="#6b7280"/>
-                          <rect x="195" y="54" width="22" height="1.5" rx="0.75" fill="#6b7280"/>
+                          <rect x="190" y="40" width="35" height="60" rx="6" fill="white" className="drop-shadow-md animate-bounce" style={{ animationDuration: '3s' }} />
+                          <rect x="195" y="45" width="25" height="2" rx="1" fill="#3b82f6" />
+                          <rect x="195" y="50" width="20" height="1.5" rx="0.75" fill="#6b7280" />
+                          <rect x="195" y="54" width="22" height="1.5" rx="0.75" fill="#6b7280" />
                         </svg>
-                        
+
                         {/* Floating Code Elements */}
-                        <div className="absolute top-2 right-2 text-blue-500 animate-bounce" style={{animationDelay: '1s', animationDuration: '2s'}}>
+                        <div className="absolute top-2 right-2 text-blue-500 animate-bounce" style={{ animationDelay: '1s', animationDuration: '2s' }}>
                           &lt;/&gt;
                         </div>
-                        <div className="absolute bottom-2 left-2 text-blue-400 animate-bounce" style={{animationDelay: '0.5s', animationDuration: '2.5s'}}>
+                        <div className="absolute bottom-2 left-2 text-blue-400 animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '2.5s' }}>
                           { }
                         </div>
                       </div>
@@ -135,49 +135,49 @@ const ServicesSection = () => {
                         {/* Animated Design Elements */}
                         <svg className="w-full h-full" viewBox="0 0 240 120" fill="none">
                           {/* Artboard */}
-                          <rect x="20" y="20" width="200" height="80" rx="8" fill="white" className="drop-shadow-md"/>
-                          
+                          <rect x="20" y="20" width="200" height="80" rx="8" fill="white" className="drop-shadow-md" />
+
                           {/* Color Palette */}
-                          <circle cx="40" cy="40" r="8" fill="#ef4444" className="animate-pulse"/>
-                          <circle cx="60" cy="40" r="8" fill="#3b82f6" className="animate-pulse" style={{animationDelay: '0.3s'}}/>
-                          <circle cx="80" cy="40" r="8" fill="#10b981" className="animate-pulse" style={{animationDelay: '0.6s'}}/>
-                          <circle cx="100" cy="40" r="8" fill="#f59e0b" className="animate-pulse" style={{animationDelay: '0.9s'}}/>
-                          
+                          <circle cx="40" cy="40" r="8" fill="#ef4444" className="animate-pulse" />
+                          <circle cx="60" cy="40" r="8" fill="#3b82f6" className="animate-pulse" style={{ animationDelay: '0.3s' }} />
+                          <circle cx="80" cy="40" r="8" fill="#10b981" className="animate-pulse" style={{ animationDelay: '0.6s' }} />
+                          <circle cx="100" cy="40" r="8" fill="#f59e0b" className="animate-pulse" style={{ animationDelay: '0.9s' }} />
+
                           {/* Design Elements */}
-                          <rect x="130" y="35" width="60" height="30" rx="4" fill="#f3f4f6" className="animate-pulse" style={{animationDelay: '0.2s'}}/>
-                          <rect x="135" y="40" width="50" height="3" rx="1.5" fill="#6b7280"/>
-                          <rect x="135" y="46" width="35" height="2" rx="1" fill="#6b7280"/>
-                          <rect x="135" y="50" width="45" height="2" rx="1" fill="#6b7280"/>
-                          
+                          <rect x="130" y="35" width="60" height="30" rx="4" fill="#f3f4f6" className="animate-pulse" style={{ animationDelay: '0.2s' }} />
+                          <rect x="135" y="40" width="50" height="3" rx="1.5" fill="#6b7280" />
+                          <rect x="135" y="46" width="35" height="2" rx="1" fill="#6b7280" />
+                          <rect x="135" y="50" width="45" height="2" rx="1" fill="#6b7280" />
+
                           {/* Typography */}
                           <text x="40" y="75" fontSize="8" fill="#374151" className="animate-pulse">Aa</text>
-                          <text x="60" y="75" fontSize="12" fill="#374151" className="animate-pulse" style={{animationDelay: '0.4s'}}>Aa</text>
-                          <text x="85" y="75" fontSize="16" fill="#374151" className="animate-pulse" style={{animationDelay: '0.8s'}}>Aa</text>
-                          
+                          <text x="60" y="75" fontSize="12" fill="#374151" className="animate-pulse" style={{ animationDelay: '0.4s' }}>Aa</text>
+                          <text x="85" y="75" fontSize="16" fill="#374151" className="animate-pulse" style={{ animationDelay: '0.8s' }}>Aa</text>
+
                           {/* Logo Placeholder */}
-                          <circle cx="160" cy="80" r="15" fill="#8b5cf6" className="animate-spin" style={{animationDuration: '4s'}}/>
-                          <rect x="153" y="77" width="14" height="2" rx="1" fill="white"/>
-                          <rect x="153" y="81" width="10" height="2" rx="1" fill="white"/>
+                          <circle cx="160" cy="80" r="15" fill="#8b5cf6" className="animate-spin" style={{ animationDuration: '4s' }} />
+                          <rect x="153" y="77" width="14" height="2" rx="1" fill="white" />
+                          <rect x="153" y="81" width="10" height="2" rx="1" fill="white" />
                         </svg>
-                        
+
                         {/* Floating Design Tools */}
-                        <div className="absolute top-2 right-2 text-purple-500 animate-bounce" style={{animationDelay: '0.5s', animationDuration: '2s'}}>
+                        <div className="absolute top-2 right-2 text-purple-500 animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '2s' }}>
                           ✏️
                         </div>
-                        <div className="absolute bottom-2 left-2 text-pink-500 animate-bounce" style={{animationDelay: '1s', animationDuration: '2.5s'}}>
+                        <div className="absolute bottom-2 left-2 text-pink-500 animate-bounce" style={{ animationDelay: '1s', animationDuration: '2.5s' }}>
                           🎨
                         </div>
-                        <div className="absolute top-6 left-6 text-purple-400 animate-bounce" style={{animationDelay: '1.5s', animationDuration: '3s'}}>
+                        <div className="absolute top-6 left-6 text-purple-400 animate-bounce" style={{ animationDelay: '1.5s', animationDuration: '3s' }}>
                           ✨
                         </div>
                       </div>
                     )}
                   </div>
-                  
+
                   <p className="text-gray-600 mb-8 text-lg leading-relaxed">
                     {service.definition}
                   </p>
-                  
+
                   <div className="mb-8">
                     <h4 className="font-semibold text-gray-800 mb-4 text-lg">What we offer:</h4>
                     <div className="grid grid-cols-2 gap-6">
@@ -190,7 +190,7 @@ const ServicesSection = () => {
                           </div>
                         ))}
                       </div>
-                      
+
                       {/* Second Column - Remaining features */}
                       <div className="space-y-3">
                         {service.features.slice(3).map((feature, featureIndex) => (
@@ -202,7 +202,7 @@ const ServicesSection = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="grid grid-cols-6 gap-4 mb-8">
                     {service.relatedIcons.map((iconItem, iconIndex) => {
                       const IconComponent = iconItem.icon;
@@ -218,10 +218,10 @@ const ServicesSection = () => {
                       );
                     })}
                   </div>
-                  
+
                   {/* Learn More Button */}
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="flex items-center gap-2 text-primary border-primary hover:bg-primary hover:text-white transition-all duration-300 px-6 py-3 text-lg group"
                     onClick={handleLearnMore}
                   >
@@ -236,8 +236,8 @@ const ServicesSection = () => {
 
         {/* View All Services Button */}
         <div className="text-center">
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-primary text-white hover:bg-primary/90 transition-colors text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl"
             onClick={handleViewAllServices}
           >

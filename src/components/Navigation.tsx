@@ -8,7 +8,7 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/1234567890", "_blank");
+    window.open("https://wa.me/+919677689494", "_blank");
   };
 
   const handleNavigation = () => {
