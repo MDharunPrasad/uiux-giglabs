@@ -33,9 +33,13 @@ const Navigation = () => {
           <Link 
             to="/" 
             onClick={handleNavigation}
-            className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200 cursor-pointer"
+            className="hover:opacity-80 transition-opacity duration-200 cursor-pointer"
           >
-            GIGLABS
+            <img 
+              src="/giglabs-logo.jpg" 
+              alt="GIGLABS" 
+              className="h-9 md:h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation Menu */}
