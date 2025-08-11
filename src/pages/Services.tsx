@@ -9,10 +9,10 @@ import { useNavigate } from "react-router-dom";
 const Services = () => {
   const navigate = useNavigate();
 
-  // Don't auto-scroll to top - let the navigation handle it
-  // useEffect(() => {
-  //   window.scrollTo({ top: 0, behavior: 'smooth' });
-  // }, []);
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
 
   const handleGetStarted = () => {
     navigate('/contact');

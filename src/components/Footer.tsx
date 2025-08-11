@@ -2,10 +2,15 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Footer = () => {
+  const handleQuickLinkClick = () => {
+    // Scroll to top instantly when footer links are clicked
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
   const quickLinks = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
     { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
     { name: "Contact Us", href: "/contact" },
   ];
 
@@ -84,6 +89,7 @@ const Footer = () => {
                 <Link
                   key={index}
                   to={link.href}
+                  onClick={handleQuickLinkClick}
                   className="block text-blue-200 hover:text-white transition-all duration-300 hover:translate-x-1 transform text-sm sm:text-base"
                 >
                   {link.name}

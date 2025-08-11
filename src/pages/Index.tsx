@@ -11,13 +11,8 @@ const Index = () => {
   const servicesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (servicesRef.current) {
-        servicesRef.current.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 3000);
-
-    return () => clearTimeout(timer);
+    // Scroll to top when component mounts
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
 
   return (

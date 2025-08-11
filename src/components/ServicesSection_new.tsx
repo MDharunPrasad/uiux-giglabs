@@ -18,14 +18,14 @@ const ServicesSection = () => {
           const targetElement = document.getElementById('uiux-web-design-complete-solution');
           if (targetElement) {
             console.log('Jumping to UI/UX Web Design section');
-            targetElement.scrollIntoView({ behavior: 'auto', block: 'start' });
+            targetElement.scrollIntoView({ behavior: 'instant', block: 'start' });
           } else {
             // Fallback: try multiple times to find the element
             let attempts = 0;
             const findAndJump = () => {
               const element = document.getElementById('uiux-web-design-complete-solution');
               if (element) {
-                element.scrollIntoView({ behavior: 'auto', block: 'start' });
+                element.scrollIntoView({ behavior: 'instant', block: 'start' });
               } else if (attempts < 10) {
                 attempts++;
                 setTimeout(findAndJump, 100);
@@ -38,14 +38,14 @@ const ServicesSection = () => {
           const targetElement = document.getElementById('logo-banner-design');
           if (targetElement) {
             console.log('Jumping to Logo & Banner Design section');
-            targetElement.scrollIntoView({ behavior: 'auto', block: 'start' });
+            targetElement.scrollIntoView({ behavior: 'instant', block: 'start' });
           } else {
             // Fallback: try multiple times to find the element
             let attempts = 0;
             const findAndJump = () => {
               const element = document.getElementById('logo-banner-design');
               if (element) {
-                element.scrollIntoView({ behavior: 'auto', block: 'start' });
+                element.scrollIntoView({ behavior: 'instant', block: 'start' });
               } else if (attempts < 10) {
                 attempts++;
                 setTimeout(findAndJump, 100);
@@ -55,9 +55,9 @@ const ServicesSection = () => {
           }
         } else {
           // Default: jump to top
-          window.scrollTo({ top: 0, behavior: 'auto' });
+          window.scrollTo({ top: 0, behavior: 'instant' });
         }
-      }, 200);
+      }, 100);
     });
   };
 
@@ -66,7 +66,7 @@ const ServicesSection = () => {
     navigate('/services', { replace: false });
     // Use requestAnimationFrame to ensure navigation completes first
     requestAnimationFrame(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'instant' });
     });
   };
 

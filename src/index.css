@@ -137,9 +137,8 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  html {
-    scroll-behavior: smooth;
-  }
+  
+  /* Removed global scroll-behavior: smooth to allow instant navigation from footer */
   
   /* Performance optimizations */
   img {

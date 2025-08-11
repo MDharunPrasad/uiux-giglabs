@@ -13,6 +13,8 @@ const Navigation = () => {
 
   const handleNavigation = () => {
     setIsMenuOpen(false);
+    // Scroll to top instantly when navigating from main navigation
+    window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
   const handleLogoClick = () => {
