@@ -39,7 +39,7 @@ const Services = () => {
         "User Research & Analysis",
         "Information Architecture",
         "Low-Fidelity Wireframes",
-        "High-Fidelity Wireframes", 
+        "High-Fidelity Wireframes",
         "Interactive Prototypes",
         "Final UI Design",
         "Responsive Design",
@@ -153,7 +153,7 @@ const Services = () => {
       ]
     },
     {
-      title: "Logo & Banner Design", 
+      title: "Logo & Banner Design",
       description: "Memorable brand identities and eye-catching banners that make your business stand out across all platforms.",
       detailedDescription: [
         "Your logo is the cornerstone of your brand identity. We create memorable, versatile logos that capture your company's essence and work across all mediums.",
@@ -163,7 +163,7 @@ const Services = () => {
         "Brand Identity Development",
         "Logo Conceptualization & Design",
         "Social Media Banners",
-        "Website Headers & Banners", 
+        "Website Headers & Banners",
         "Marketing Material Design",
         "Typography & Color Systems",
         "Brand Guidelines Creation",
@@ -250,11 +250,11 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <main>
         {/* Hero Section */}
         <section className="container mx-auto px-6 py-24">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -274,12 +274,12 @@ const Services = () => {
 
         {/* Services Sections */}
         {serviceCategories.map((category, categoryIndex) => (
-          <section 
+          <section
             key={categoryIndex}
-            id={category.title === "UI/UX Web Design (Complete Solution)" ? "ui-ux-web-design" : 
-                category.title === "WordPress Web Design & Development" ? "wordpress-web-design" : 
-                category.title === "Logo & Banner Design" ? "logo-banner-design" : 
-                category.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
+            id={category.title === "UI/UX Web Design (Complete Solution)" ? "ui-ux-web-design" :
+              category.title === "WordPress Web Design & Development" ? "wordpress-web-design" :
+                category.title === "Logo & Banner Design" ? "logo-banner-design" :
+                  category.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
             className={`py-20 ${categoryIndex % 2 === 0 ? 'bg-gray-50/50' : 'bg-background'} border-b border-gray-100`}
           >
             <div className="container mx-auto px-6 max-w-7xl">
@@ -301,7 +301,7 @@ const Services = () => {
 
               <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
                 {/* Content Section */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
@@ -333,7 +333,7 @@ const Services = () => {
                       })}
                     </div>
                   </div>
-                  
+
                   {/* Features List */}
                   <div className="space-y-3">
                     <h4 className="text-xl font-semibold text-foreground mb-4">What's Included</h4>
@@ -348,9 +348,9 @@ const Services = () => {
                       ))}
                     </div>
                   </div>
-                  
-                  <Button 
-                    size="lg" 
+
+                  <Button
+                    size="lg"
                     onClick={handleGetStarted}
                     className="gradient-primary text-white shadow-button hover:shadow-glow transition-spring group mt-8"
                   >
@@ -360,7 +360,7 @@ const Services = () => {
                 </motion.div>
 
                 {/* Images Section */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
@@ -370,19 +370,19 @@ const Services = () => {
                   <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
                     {/* First image - spans full width */}
                     <div className="col-span-2">
-                      <img 
+                      <img
                         src={category.images[0]}
                         alt={`${category.title} example 1`}
                         className="w-full aspect-[16/10] object-cover rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-500"
                       />
                     </div>
                     {/* Two smaller images below */}
-                    <img 
+                    <img
                       src={category.images[1]}
                       alt={`${category.title} example 2`}
                       className="w-full aspect-square object-cover rounded-xl shadow-lg hover:scale-[1.02] transition-transform duration-500"
                     />
-                    <img 
+                    <img
                       src={category.images[2]}
                       alt={`${category.title} example 3`}
                       className="w-full aspect-square object-cover rounded-xl shadow-lg hover:scale-[1.02] transition-transform duration-500"
@@ -414,8 +414,8 @@ const Services = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   onClick={() => {
                     navigate('/contact');
                     // Use requestAnimationFrame to ensure navigation completes first
