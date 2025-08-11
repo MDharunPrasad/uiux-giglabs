@@ -97,7 +97,7 @@ const Contact = () => {
     `.trim();
 
     // Replace with your WhatsApp number (without + or spaces)
-    const whatsappNumber = "1234567890"; // Replace with your actual WhatsApp number
+    const whatsappNumber = "+919677689494"; // Replace with your actual WhatsApp number
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
