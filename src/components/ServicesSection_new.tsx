@@ -6,12 +6,40 @@ import { useEffect } from "react";
 const ServicesSection = () => {
   const navigate = useNavigate();
 
-  const handleLearnMore = () => {
-    console.log('Learn More clicked - navigating to services');
+  const handleLearnMore = (serviceCategory: string) => {
+    console.log(`Learn More clicked for ${serviceCategory} - navigating to services`);
     navigate('/services', { replace: false });
     // Use requestAnimationFrame to ensure navigation completes first
     requestAnimationFrame(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Scroll to specific service section based on category
+      if (serviceCategory === "Web Design") {
+        // Scroll to "UI/UX Web Design (Complete Solution)" section
+        setTimeout(() => {
+          const targetElement = document.getElementById('ui-ux-web-design');
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Adjust scroll position to show the title better
+            setTimeout(() => {
+              window.scrollBy({ top: -80, behavior: 'smooth' });
+            }, 100);
+          }
+        }, 300);
+      } else if (serviceCategory === "Graphic Design") {
+        // Scroll to "Logo & Banner Design" section
+        setTimeout(() => {
+          const targetElement = document.getElementById('logo-banner-design');
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Adjust scroll position to show the title better
+            setTimeout(() => {
+              window.scrollBy({ top: -80, behavior: 'smooth' });
+            }, 100);
+          }
+        }, 300);
+      } else {
+        // Default scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     });
   };
 
@@ -223,7 +251,7 @@ const ServicesSection = () => {
                   <Button
                     variant="outline"
                     className="flex items-center gap-2 text-primary border-primary hover:bg-primary hover:text-white transition-all duration-300 px-6 py-3 text-lg group"
-                    onClick={handleLearnMore}
+                    onClick={() => handleLearnMore(service.category)}
                   >
                     Learn More
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

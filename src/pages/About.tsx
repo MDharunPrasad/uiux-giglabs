@@ -340,7 +340,18 @@ const About = () => {
                 className="gradient-primary text-white px-8 py-4 rounded-xl font-semibold hover:shadow-glow transition-all duration-300 inline-flex items-center gap-2 text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => navigate('/contact')}
+                onClick={() => {
+                  navigate('/contact');
+                  // Use requestAnimationFrame to ensure navigation completes first
+                  requestAnimationFrame(() => {
+                    setTimeout(() => {
+                      const targetElement = document.getElementById('start-your-project');
+                      if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }, 100);
+                  });
+                }}
               >
                 Start Your Project
                 <ArrowRight className="w-5 h-5" />

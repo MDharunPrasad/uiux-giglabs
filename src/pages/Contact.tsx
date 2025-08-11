@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MapPin, Phone, Mail, Clock, Camera, Building2, Users } from "lucide-react";
 
 // Import office photos
@@ -21,6 +21,19 @@ const Contact = () => {
     budgetRange: "",
     additionalInfo: ""
   });
+
+  // Handle hash navigation on page load
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash === '#start-your-project') {
+      setTimeout(() => {
+        const targetElement = document.getElementById('start-your-project');
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, []);
 
   const contactInfo = [
     {
@@ -167,7 +180,7 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
-            id="start-project"
+            id="start-your-project"
           >
             <div className="bg-white rounded-3xl p-6 md:p-8 lg:p-10 shadow-xl border border-blue-200 relative overflow-hidden backdrop-blur-sm">
               {/* Background decoration with theme colors */}

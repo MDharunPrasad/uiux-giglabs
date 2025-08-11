@@ -15,7 +15,16 @@ const Services = () => {
   }, []);
 
   const handleGetStarted = () => {
-    navigate('/contact#start-your-project');
+    navigate('/contact');
+    // Use requestAnimationFrame to ensure navigation completes first
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        const targetElement = document.getElementById('start-your-project');
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    });
   };
 
   const serviceCategories = [
@@ -267,6 +276,10 @@ const Services = () => {
         {serviceCategories.map((category, categoryIndex) => (
           <section 
             key={categoryIndex}
+            id={category.title === "UI/UX Web Design (Complete Solution)" ? "ui-ux-web-design" : 
+                category.title === "WordPress Web Design & Development" ? "wordpress-web-design" : 
+                category.title === "Logo & Banner Design" ? "logo-banner-design" : 
+                category.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
             className={`py-20 ${categoryIndex % 2 === 0 ? 'bg-gray-50/50' : 'bg-background'} border-b border-gray-100`}
           >
             <div className="container mx-auto px-6 max-w-7xl">
@@ -403,6 +416,13 @@ const Services = () => {
               >
                 <Button 
                   size="lg" 
+                  onClick={() => {
+                    navigate('/contact');
+                    // Use requestAnimationFrame to ensure navigation completes first
+                    requestAnimationFrame(() => {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    });
+                  }}
                   className="gradient-primary text-white transition-all duration-300 text-lg px-8 py-4 font-semibold shadow-lg hover:shadow-xl"
                 >
                   Contact Us Today
