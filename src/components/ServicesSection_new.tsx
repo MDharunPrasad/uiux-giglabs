@@ -9,37 +9,55 @@ const ServicesSection = () => {
   const handleLearnMore = (serviceCategory: string) => {
     console.log(`Learn More clicked for ${serviceCategory} - navigating to services`);
     navigate('/services', { replace: false });
-    // Use requestAnimationFrame to ensure navigation completes first
+    
+    // Jump directly to specific sections without animation
     requestAnimationFrame(() => {
-      // Scroll to specific service section based on category
-      if (serviceCategory === "Web Design") {
-        // Scroll to "UI/UX Web Design (Complete Solution)" section
-        setTimeout(() => {
-          const targetElement = document.getElementById('ui-ux-web-design');
+      setTimeout(() => {
+        if (serviceCategory === "Web Design") {
+          // Jump directly to UI/UX Web Design (Complete Solution) section
+          const targetElement = document.getElementById('uiux-web-design-complete-solution');
           if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            // Adjust scroll position to show the title better
-            setTimeout(() => {
-              window.scrollBy({ top: -80, behavior: 'smooth' });
-            }, 100);
+            console.log('Jumping to UI/UX Web Design section');
+            targetElement.scrollIntoView({ behavior: 'auto', block: 'start' });
+          } else {
+            // Fallback: try multiple times to find the element
+            let attempts = 0;
+            const findAndJump = () => {
+              const element = document.getElementById('uiux-web-design-complete-solution');
+              if (element) {
+                element.scrollIntoView({ behavior: 'auto', block: 'start' });
+              } else if (attempts < 10) {
+                attempts++;
+                setTimeout(findAndJump, 100);
+              }
+            };
+            findAndJump();
           }
-        }, 300);
-      } else if (serviceCategory === "Graphic Design") {
-        // Scroll to "Logo & Banner Design" section
-        setTimeout(() => {
+        } else if (serviceCategory === "Graphic Design") {
+          // Jump directly to Logo & Banner Design section
           const targetElement = document.getElementById('logo-banner-design');
           if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            // Adjust scroll position to show the title better
-            setTimeout(() => {
-              window.scrollBy({ top: -80, behavior: 'smooth' });
-            }, 100);
+            console.log('Jumping to Logo & Banner Design section');
+            targetElement.scrollIntoView({ behavior: 'auto', block: 'start' });
+          } else {
+            // Fallback: try multiple times to find the element
+            let attempts = 0;
+            const findAndJump = () => {
+              const element = document.getElementById('logo-banner-design');
+              if (element) {
+                element.scrollIntoView({ behavior: 'auto', block: 'start' });
+              } else if (attempts < 10) {
+                attempts++;
+                setTimeout(findAndJump, 100);
+              }
+            };
+            findAndJump();
           }
-        }, 300);
-      } else {
-        // Default scroll to top
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+        } else {
+          // Default: jump to top
+          window.scrollTo({ top: 0, behavior: 'auto' });
+        }
+      }, 200);
     });
   };
 

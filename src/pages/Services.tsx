@@ -9,10 +9,10 @@ import { useNavigate } from "react-router-dom";
 const Services = () => {
   const navigate = useNavigate();
 
-  // Scroll to top when component mounts
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
+  // Don't auto-scroll to top - let the navigation handle it
+  // useEffect(() => {
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // }, []);
 
   const handleGetStarted = () => {
     navigate('/contact');
@@ -273,15 +273,44 @@ const Services = () => {
         </section>
 
         {/* Services Sections */}
-        {serviceCategories.map((category, categoryIndex) => (
-          <section
-            key={categoryIndex}
-            id={category.title === "UI/UX Web Design (Complete Solution)" ? "ui-ux-web-design" :
-              category.title === "WordPress Web Design & Development" ? "wordpress-web-design" :
-                category.title === "Logo & Banner Design" ? "logo-banner-design" :
-                  category.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
-            className={`py-20 ${categoryIndex % 2 === 0 ? 'bg-gray-50/50' : 'bg-background'} border-b border-gray-100`}
-          >
+        {serviceCategories.map((category, categoryIndex) => {
+          let sectionId;
+          
+          // Explicit ID assignment for specific sections
+          switch (category.title) {
+            case "UI/UX Web Design (Complete Solution)":
+              sectionId = "uiux-web-design-complete-solution";
+              break;
+            case "WordPress Web Design & Development":
+              sectionId = "wordpress-web-design";
+              break;
+            case "Logo & Banner Design":
+              sectionId = "logo-banner-design";
+              break;
+            case "Wireframes (Low-Fi & High-Fi)":
+              sectionId = "wireframes-low-fi-high-fi";
+              break;
+            case "Interactive Prototypes":
+              sectionId = "interactive-prototypes";
+              break;
+            case "Product Mockups":
+              sectionId = "product-mockups";
+              break;
+            case "Brand & Visual Design":
+              sectionId = "brand-visual-design";
+              break;
+            default:
+              sectionId = category.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+          }
+          
+          console.log(`Service section: "${category.title}" -> ID: "${sectionId}"`);
+          
+          return (
+            <section
+              key={categoryIndex}
+              id={sectionId}
+              className={`py-20 ${categoryIndex % 2 === 0 ? 'bg-gray-50/50' : 'bg-background'} border-b border-gray-100`}
+            >
             <div className="container mx-auto px-6 max-w-7xl">
               {/* Section Header */}
               <motion.div
@@ -392,7 +421,8 @@ const Services = () => {
               </div>
             </div>
           </section>
-        ))}
+          );
+        })}
 
         {/* CTA Section */}
         <section className="bg-slate-50 py-24">

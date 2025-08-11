@@ -12,6 +12,10 @@ const Navigation = () => {
   };
 
   const handleNavigation = () => {
+    setIsMenuOpen(false);
+  };
+
+  const handleLogoClick = () => {
     window.scrollTo({ top: 0, behavior: 'instant' });
     setIsMenuOpen(false);
   };
@@ -32,7 +36,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            onClick={handleNavigation}
+            onClick={handleLogoClick}
             className="hover:opacity-80 transition-opacity duration-200 cursor-pointer"
           >
             <img 
