@@ -13,6 +13,19 @@ const Index = () => {
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo({ top: 0, behavior: 'instant' });
+
+    // Auto-scroll to services section after 5 seconds
+    const autoScrollTimer = setTimeout(() => {
+      if (servicesRef.current) {
+        servicesRef.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }, 6000);
+
+    // Cleanup timer on component unmount
+    return () => clearTimeout(autoScrollTimer);
   }, []);
 
   return (
