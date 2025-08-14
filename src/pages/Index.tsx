@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import Navigation from "@/components/Navigation";
-import HeroSection from "@/components/HeroSection";
+import HeroSlider from "@/components/HeroSlider";
 import TrustedPartners from "@/components/TrustedPartners";
 import ProcessSection from "@/components/ProcessSection";
 import ServicesSection from "@/components/ServicesSection_new";
@@ -13,26 +13,13 @@ const Index = () => {
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo({ top: 0, behavior: 'instant' });
-
-    // Auto-scroll to services section after 5 seconds
-    const autoScrollTimer = setTimeout(() => {
-      if (servicesRef.current) {
-        servicesRef.current.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    }, 6000);
-
-    // Cleanup timer on component unmount
-    return () => clearTimeout(autoScrollTimer);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <main>
-        <HeroSection />
+        <HeroSlider />
         <TrustedPartners />
         <ProcessSection />
         <div ref={servicesRef}>
