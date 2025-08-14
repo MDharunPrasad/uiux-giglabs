@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, ComponentType, SVGProps } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Monitor, Palette, Phone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -22,7 +22,7 @@ interface Slide {
     action: () => void;
   };
   image: string;
-  icon: any;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
 }
 
 const HeroSlider = () => {
@@ -31,6 +31,7 @@ const HeroSlider = () => {
   const [isPaused, setIsPaused] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const lastScrollTime = useRef(0);
+  const pauseSafetyTimer = useRef<NodeJS.Timeout | null>(null);
 
   const slides: Slide[] = [
     {
@@ -109,10 +110,26 @@ const HeroSlider = () => {
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000); // Changed to 5 seconds
+  }, 4000); // Changed to 4 seconds per request
 
     return () => clearInterval(interval);
   }, [isPaused, slides.length]);
+
+  // Safety: ensure we never stay paused forever (e.g., mobile tap triggering mouseenter without mouseleave)
+  useEffect(() => {
+    if (pauseSafetyTimer.current) {
+      clearTimeout(pauseSafetyTimer.current);
+      pauseSafetyTimer.current = null;
+    }
+    if (isPaused) {
+      pauseSafetyTimer.current = setTimeout(() => {
+        setIsPaused(false);
+      }, 4000); // auto-resume after 4s of inactivity
+    }
+    return () => {
+      if (pauseSafetyTimer.current) clearTimeout(pauseSafetyTimer.current);
+    };
+  }, [isPaused]);
 
   // Scroll navigation functionality
   useEffect(() => {
@@ -164,6 +181,13 @@ const HeroSlider = () => {
       className="relative min-h-screen flex items-center overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
+  // Mobile / touch & unified pointer interactions
+  onTouchStart={() => setIsPaused(true)}
+  onTouchEnd={() => setIsPaused(false)}
+  onTouchCancel={() => setIsPaused(false)}
+  onPointerDown={() => setIsPaused(true)}
+  onPointerUp={() => setIsPaused(false)}
+  onPointerCancel={() => setIsPaused(false)}
     >
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50" />
